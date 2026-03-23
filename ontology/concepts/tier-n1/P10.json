@@ -1,0 +1,26 @@
+{
+  "id": "P10",
+  "name": "Security Fundamentals",
+  "name_ko": "보안 기초",
+  "tier": -1,
+  "tier_name": "순수기초 (Pure Foundations)",
+  "description": "Authentication, OAuth2, JWT, RBAC→ABAC→ReBAC, Zero Trust. Security principles for protecting systems and data.",
+  "prerequisites": [],
+  "enables": ["F09"],
+  "agent": "foundations-researcher",
+  "keywords": ["authentication", "authorization", "OAuth2", "JWT", "RBAC", "ABAC", "Zero Trust", "encryption", "TLS", "OWASP"],
+  "core_components": [
+    "인증과 인가 (Authentication vs Authorization)",
+    "OAuth2 / OpenID Connect",
+    "JWT (JSON Web Token)",
+    "접근 제어 모델 진화 (RBAC → ABAC → ReBAC)",
+    "제로 트러스트 아키텍처 (Zero Trust Architecture)",
+    "암호화 원칙 (Encryption at Rest/In Transit)"
+  ],
+  "development_patterns": [
+    "최소 권한 원칙: 모든 서비스/사용자에 필요 최소 권한만 부여하는 기본 정책 적용",
+    "토큰 기반 인증: JWT 발급 → 검증 → 갱신 플로우 설계, 토큰 수명/회전 전략 수립",
+    "보안 레이어 계층화: 네트워크 → 인프라 → 앱 → 데이터 각 레이어별 방어 전략 수립",
+    "보안 감사 자동화: CI/CD에 SAST/DAST/의존성 스캔 통합으로 취약점 조기 발견"
+  ]
+}
