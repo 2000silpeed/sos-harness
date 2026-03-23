@@ -1,0 +1,26 @@
+{
+  "id": "C12",
+  "name": "FDE (Field Deployment Engineer)",
+  "name_ko": "현장배치엔지니어",
+  "tier": 3,
+  "tier_name": "구현 (Implementation)",
+  "description": "4 bridge roles: language/priority/change/feedback, meta-ontology accumulation. The human-system interface that translates between domain experts and the technical system.",
+  "prerequisites": ["C06", "C10"],
+  "enables": ["C15"],
+  "agent": "implementation-lead",
+  "keywords": ["FDE", "field deployment", "language bridge", "priority bridge", "change bridge", "feedback bridge", "meta-ontology accumulation", "domain translation"],
+  "core_components": [
+    "언어 브릿지 (Language Bridge: 도메인 전문가 ↔ 시스템 용어 번역)",
+    "우선순위 브릿지 (Priority Bridge: 비즈니스 가치 ↔ 구현 순서 매핑)",
+    "변화 브릿지 (Change Bridge: 현장 변경 요청 → 시스템 변경 전파)",
+    "피드백 브릿지 (Feedback Bridge: 시스템 성과 → 현장 개선점 환류)",
+    "메타온톨로지 축적 (Meta-Ontology Accumulation from Field Experience)",
+    "현장 진단 도구 (Field Diagnostic Tools)"
+  ],
+  "development_patterns": [
+    "4 브릿지 병렬 운영: 언어/우선순위/변화/피드백 브릿지를 독립적으로 운영하되 상호 정보 공유",
+    "메타온톨로지 축적 루프: 현장 경험 → 패턴 추출 → 메타온톨로지 갱신 → 새 현장에 적용",
+    "번역 사전 자동화: 도메인 전문가와의 반복 대화에서 용어 매핑을 자동 학습/축적",
+    "변경 영향도 분석: 현장 변경 요청 시 시스템 전체 영향도를 그래프 분석으로 시각화"
+  ]
+}
