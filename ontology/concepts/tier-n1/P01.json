@@ -1,0 +1,26 @@
+{
+  "id": "P01",
+  "name": "Probability & Statistics",
+  "name_ko": "확률과 통계",
+  "tier": -1,
+  "tier_name": "순수기초 (Pure Foundations)",
+  "description": "Bayes theorem, distributions, MLE/MAP, entropy. Foundation for reasoning under uncertainty in all ML and AI systems.",
+  "prerequisites": [],
+  "enables": ["F01", "F07"],
+  "agent": "foundations-researcher",
+  "keywords": ["Bayes theorem", "probability distribution", "MLE", "MAP", "entropy", "conditional probability", "Gaussian", "Bernoulli", "information theory"],
+  "core_components": [
+    "베이즈 정리 (Bayes' Theorem)",
+    "확률 분포 (Probability Distributions)",
+    "최대우도추정/최대사후확률 (MLE/MAP)",
+    "정보 엔트로피 (Information Entropy)",
+    "조건부 확률 (Conditional Probability)",
+    "기대값과 분산 (Expectation & Variance)"
+  ],
+  "development_patterns": [
+    "A/B 테스트에 베이지안 분석 적용: 사전분포 설정 → 데이터 수집 → 사후분포 갱신 → 의사결정",
+    "불확실성 정량화: 모든 ML 예측에 confidence interval 또는 posterior distribution 제공",
+    "피처 선택에 상호정보량(mutual information) 활용: 엔트로피 기반 변수 중요도 측정",
+    "확률적 데이터 파이프라인: 결측값 처리 시 분포 기반 대체(imputation) 적용"
+  ]
+}
