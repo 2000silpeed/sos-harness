@@ -1,0 +1,27 @@
+{
+  "id": "C10",
+  "name": "Vector Semantic Enrichment",
+  "name_ko": "벡터의미강화",
+  "tier": 2,
+  "tier_name": "프레임워크 (Framework)",
+  "description": "3-stage pipeline: lexical expansion, semantic layering, ontology alignment. Enriching raw query vectors with multi-layered semantic context before retrieval.",
+  "prerequisites": ["C01", "F01"],
+  "enables": ["C11", "C12"],
+  "agent": "framework-designer",
+  "keywords": ["vector enrichment", "lexical expansion", "semantic layering", "ontology alignment", "query enrichment", "multi-layer semantics", "context injection"],
+  "core_components": [
+    "어휘 확장 (Lexical Expansion: Synonym/Hypernym/Related Terms)",
+    "의미 다층화 (Semantic Layering: Context/Intent/Domain Layers)",
+    "온톨로지 정렬 (Ontology Alignment: Concept→Class Mapping)",
+    "3단계 파이프라인 (Expand → Layer → Align Pipeline)",
+    "강화 벡터 생성 (Enriched Vector Generation)",
+    "컨텍스트 주입 (Context Injection into Query Vectors)"
+  ],
+  "development_patterns": [
+    "3단계 순차 파이프라인: 어휘확장(동의어/상위어) → 의미다층화(컨텍스트/의도) → 온톨로지정렬",
+    "확장 품질 평가: 확장 전후 검색 결과 비교로 각 확장 단계의 효과 정량화",
+    "도메인별 확장 사전: 도메인 용어 사전을 어휘 확장 단계에 통합하여 전문 검색 강화",
+    "온톨로지 정렬 캐싱: 자주 사용되는 쿼리-온톨로지 매핑을 캐싱하여 실시간 응답 확보",
+    "A/B 테스트: 강화 전/후 벡터의 검색 결과 품질을 사용자 피드백으로 비교 검증"
+  ]
+}
