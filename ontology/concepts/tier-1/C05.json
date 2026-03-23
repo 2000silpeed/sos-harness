@@ -1,0 +1,26 @@
+{
+  "id": "C05",
+  "name": "Topological Intelligence",
+  "name_ko": "위상적 지능",
+  "tier": 1,
+  "tier_name": "핵심 (Core)",
+  "description": "Structural analysis using Betti numbers, reusability metrics, measurability of knowledge structures. Applying topological methods to analyze and optimize knowledge graph structure.",
+  "prerequisites": ["F04", "F07", "F08"],
+  "enables": ["C06", "C13"],
+  "agent": "core-architect",
+  "keywords": ["topological intelligence", "Betti numbers", "structural analysis", "reusability", "measurability", "knowledge structure", "topological features", "persistent patterns"],
+  "core_components": [
+    "베티 수 기반 구조 분석 (Betti Number Analysis of Knowledge Graphs)",
+    "재사용성 측정 (Reusability Metrics for Knowledge Components)",
+    "측정 가능성 (Measurability of Structural Properties)",
+    "구조적 취약점 식별 (Structural Vulnerability Detection)",
+    "위상적 피처 추출 (Topological Feature Extraction for ML)",
+    "구조 최적화 권고 (Structure Optimization Recommendations)"
+  ],
+  "development_patterns": [
+    "그래프 건강도 대시보드: 베티 수, 연결성, 중심성 등 위상적 지표를 실시간 모니터링",
+    "구조적 병목 탐지: 위상적 분석으로 지식 그래프의 단일 장애점(SPOF) 식별",
+    "재사용성 점수: 각 지식 구성요소의 다른 도메인 적용 가능성을 위상적으로 정량화",
+    "진화 추적: 지식 그래프의 위상적 변화를 시간 축으로 추적하여 성장 패턴 분석"
+  ]
+}
