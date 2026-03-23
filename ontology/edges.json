@@ -1,0 +1,360 @@
+{
+  "description": "SOS 온톨로지 35개 개념 간 모든 의존성 관계",
+  "edge_count": 62,
+  "edges": [
+    {
+      "source": "P01",
+      "target": "F01",
+      "type": "prerequisite",
+      "description": "확률 분포와 통계적 추론이 임베딩 벡터의 의미 거리 측정에 필수"
+    },
+    {
+      "source": "P01",
+      "target": "F07",
+      "type": "prerequisite",
+      "description": "베이즈 정리와 조건부 확률이 베이지안 추론의 직접적 기반"
+    },
+    {
+      "source": "P02",
+      "target": "F01",
+      "type": "prerequisite",
+      "description": "벡터 연산과 코사인 유사도가 임베딩 공간 구성에 필수"
+    },
+    {
+      "source": "P02",
+      "target": "F02",
+      "type": "prerequisite",
+      "description": "벡터 공간 모델이 시맨틱 검색의 유사도 계산에 기반"
+    },
+    {
+      "source": "P02",
+      "target": "F08",
+      "type": "prerequisite",
+      "description": "벡터 공간의 위상적 성질이 위상수학 기초 적용에 필수"
+    },
+    {
+      "source": "P03",
+      "target": "F04",
+      "type": "prerequisite",
+      "description": "노드/엣지/트리플 개념이 지식 그래프 구축의 기본 단위"
+    },
+    {
+      "source": "P03",
+      "target": "F05",
+      "type": "prerequisite",
+      "description": "그래프 순회 알고리즘(BFS/DFS)이 그래프 DB 쿼리 최적화에 필수"
+    },
+    {
+      "source": "P04",
+      "target": "F05",
+      "type": "prerequisite",
+      "description": "ACID, 인덱싱, 쿼리 최적화 원리가 그래프 DB 운영의 기반"
+    },
+    {
+      "source": "P05",
+      "target": "F01",
+      "type": "prerequisite",
+      "description": "신경망 학습과 역전파가 임베딩 모델 훈련에 필수"
+    },
+    {
+      "source": "P05",
+      "target": "F03",
+      "type": "prerequisite",
+      "description": "ML 모델의 추론 능력이 RAG의 생성 단계에 핵심"
+    },
+    {
+      "source": "P05",
+      "target": "F06",
+      "type": "prerequisite",
+      "description": "딥러닝 기초와 손실 함수 이해가 LLM 작동 원리 파악에 필수"
+    },
+    {
+      "source": "P05",
+      "target": "F10",
+      "type": "prerequisite",
+      "description": "강화학습과 의사결정 이론이 에이전트 행동 정책에 기반"
+    },
+    {
+      "source": "P06",
+      "target": "F02",
+      "type": "prerequisite",
+      "description": "토큰화와 어텐션 메커니즘이 시맨틱 검색의 언어 이해에 필수"
+    },
+    {
+      "source": "P06",
+      "target": "F06",
+      "type": "prerequisite",
+      "description": "NLP 파이프라인 이해가 LLM 프롬프트 설계와 출력 해석에 필수"
+    },
+    {
+      "source": "P07",
+      "target": "F02",
+      "type": "prerequisite",
+      "description": "역색인과 BM25 등 전통 IR 기법이 하이브리드 검색에 결합"
+    },
+    {
+      "source": "P07",
+      "target": "F03",
+      "type": "prerequisite",
+      "description": "정보 검색의 적합성 평가 원리가 RAG의 검색 품질 기반"
+    },
+    {
+      "source": "P08",
+      "target": "F01",
+      "type": "prerequisite",
+      "description": "트랜스포머의 셀프 어텐션이 문맥 인식 임베딩 생성에 핵심"
+    },
+    {
+      "source": "P08",
+      "target": "F06",
+      "type": "prerequisite",
+      "description": "트랜스포머 아키텍처가 GPT/BERT 등 모든 현대 LLM의 기반"
+    },
+    {
+      "source": "P09",
+      "target": "F10",
+      "type": "prerequisite",
+      "description": "REST/이벤트 기반 API와 MCP 프로토콜이 에이전트 외부 통신에 필수"
+    },
+    {
+      "source": "P10",
+      "target": "F09",
+      "type": "prerequisite",
+      "description": "인증/인가/제로트러스트 원칙이 접근 제어 시스템의 기반"
+    },
+    {
+      "source": "F01",
+      "target": "C01",
+      "type": "prerequisite",
+      "description": "임베딩 벡터가 GraphRAG의 엔티티 유사도 계산과 커뮤니티 감지에 사용"
+    },
+    {
+      "source": "F02",
+      "target": "C01",
+      "type": "prerequisite",
+      "description": "시맨틱 검색이 GraphRAG의 온라인 쿼리 처리 단계에 핵심"
+    },
+    {
+      "source": "F03",
+      "target": "C01",
+      "type": "prerequisite",
+      "description": "RAG 패러다임이 GraphRAG의 검색-생성 파이프라인의 직접적 확장"
+    },
+    {
+      "source": "F04",
+      "target": "C01",
+      "type": "prerequisite",
+      "description": "지식 그래프 구조가 GraphRAG의 그래프 인덱싱에 필수"
+    },
+    {
+      "source": "F05",
+      "target": "C01",
+      "type": "prerequisite",
+      "description": "그래프 DB의 순회/커뮤니티 감지가 GraphRAG 인덱싱 파이프라인에 사용"
+    },
+    {
+      "source": "F04",
+      "target": "C02",
+      "type": "prerequisite",
+      "description": "지식 그래프의 트리플/스키마 개념이 온톨로지 모델링의 기반"
+    },
+    {
+      "source": "F06",
+      "target": "C02",
+      "type": "prerequisite",
+      "description": "LLM이 온톨로지 자동 구축과 개체 추출에 활용"
+    },
+    {
+      "source": "F04",
+      "target": "C03",
+      "type": "prerequisite",
+      "description": "지식 그래프의 관계 모델이 메타엣지의 '관계의 관계' 개념에 확장"
+    },
+    {
+      "source": "F05",
+      "target": "C03",
+      "type": "prerequisite",
+      "description": "그래프 DB의 다중 홉 쿼리가 메타엣지 탐색에 필수"
+    },
+    {
+      "source": "F06",
+      "target": "C04",
+      "type": "prerequisite",
+      "description": "LLM이 Palantir AIP의 자연어 인터페이스와 액션 생성에 핵심"
+    },
+    {
+      "source": "F09",
+      "target": "C04",
+      "type": "prerequisite",
+      "description": "접근 제어가 AIP/Apollo의 보안 레이어와 권한 관리에 필수"
+    },
+    {
+      "source": "F10",
+      "target": "C04",
+      "type": "prerequisite",
+      "description": "에이전트 오케스트레이션이 Apollo의 자율 에이전트 실행에 기반"
+    },
+    {
+      "source": "F04",
+      "target": "C05",
+      "type": "prerequisite",
+      "description": "지식 그래프의 구조적 패턴이 위상적 분석의 입력 데이터"
+    },
+    {
+      "source": "F07",
+      "target": "C05",
+      "type": "prerequisite",
+      "description": "베이지안 추론이 위상적 지능의 불확실성 추정에 활용"
+    },
+    {
+      "source": "F08",
+      "target": "C05",
+      "type": "prerequisite",
+      "description": "TDA와 퍼시스턴트 호몰로지가 위상적 구조 분석의 핵심 도구"
+    },
+    {
+      "source": "C01",
+      "target": "C06",
+      "type": "enables",
+      "description": "GraphRAG의 커뮤니티 구조가 6분석공간의 계층/구조 분석에 입력"
+    },
+    {
+      "source": "C02",
+      "target": "C06",
+      "type": "enables",
+      "description": "온톨로지의 클래스/관계 구조가 6분석공간의 의미적 프레임워크 제공"
+    },
+    {
+      "source": "C04",
+      "target": "C06",
+      "type": "enables",
+      "description": "AIP의 오브젝트/링크/액션 타입이 6분석공간의 실제 데이터 소스"
+    },
+    {
+      "source": "C05",
+      "target": "C06",
+      "type": "enables",
+      "description": "위상적 지능의 구조 분석이 6분석공간의 구조공간/인과공간에 활용"
+    },
+    {
+      "source": "C02",
+      "target": "C07",
+      "type": "enables",
+      "description": "온톨로지의 관계 정의가 ReBAC의 접근 경로 정의에 직접 사용"
+    },
+    {
+      "source": "C03",
+      "target": "C07",
+      "type": "enables",
+      "description": "메타엣지의 관계 규칙이 ReBAC의 동적 권한 정책에 반영"
+    },
+    {
+      "source": "F09",
+      "target": "C07",
+      "type": "prerequisite",
+      "description": "RBAC→ABAC→ReBAC 진화 이해가 관계 기반 접근 제어 구현에 필수"
+    },
+    {
+      "source": "C02",
+      "target": "C08",
+      "type": "enables",
+      "description": "도메인 온톨로지 설계 경험이 메타온톨로지의 추상화 패턴에 기반"
+    },
+    {
+      "source": "C02",
+      "target": "C09",
+      "type": "enables",
+      "description": "온톨로지 원리가 도메인별 특화 온톨로지 구축 방법론에 적용"
+    },
+    {
+      "source": "C01",
+      "target": "C10",
+      "type": "enables",
+      "description": "GraphRAG의 그래프 구조가 벡터 의미 강화의 온톨로지 정렬 단계에 활용"
+    },
+    {
+      "source": "F01",
+      "target": "C10",
+      "type": "prerequisite",
+      "description": "임베딩 기술이 벡터 의미 강화의 기반 벡터 생성에 필수"
+    },
+    {
+      "source": "C06",
+      "target": "C11",
+      "type": "enables",
+      "description": "6분석공간이 NOMIK의 17개 노드 타입과 분석 구조에 반영"
+    },
+    {
+      "source": "C07",
+      "target": "C11",
+      "type": "enables",
+      "description": "ReBAC가 NOMIK의 접근 제어 레이어에 통합"
+    },
+    {
+      "source": "C08",
+      "target": "C11",
+      "type": "enables",
+      "description": "메타온톨로지가 NOMIK의 도메인 횡단 패턴에 적용"
+    },
+    {
+      "source": "C09",
+      "target": "C11",
+      "type": "enables",
+      "description": "도메인 온톨로지가 NOMIK의 도메인별 노드/엣지 타입에 구체화"
+    },
+    {
+      "source": "C10",
+      "target": "C11",
+      "type": "enables",
+      "description": "벡터 의미 강화가 NOMIK의 SCAN 단계에서 쿼리 최적화에 활용"
+    },
+    {
+      "source": "C06",
+      "target": "C12",
+      "type": "enables",
+      "description": "6분석공간의 다차원 분석이 FDE의 현장 진단에 활용"
+    },
+    {
+      "source": "C10",
+      "target": "C12",
+      "type": "enables",
+      "description": "벡터 의미 강화가 FDE의 언어 브릿지 역할에 적용"
+    },
+    {
+      "source": "C05",
+      "target": "C13",
+      "type": "enables",
+      "description": "위상적 지능의 구조 분석이 레버 포인트 식별에 핵심"
+    },
+    {
+      "source": "C06",
+      "target": "C13",
+      "type": "enables",
+      "description": "6분석공간의 인과분석이 레버 효과의 측정과 예측에 활용"
+    },
+    {
+      "source": "C08",
+      "target": "C14",
+      "type": "enables",
+      "description": "메타온톨로지의 보편원리가 물리연산엔진의 재귀 분해 규칙에 적용"
+    },
+    {
+      "source": "C13",
+      "target": "C14",
+      "type": "enables",
+      "description": "레버/메타레버의 5가지 속성이 물리연산엔진의 파라미터 최적화에 핵심"
+    },
+    {
+      "source": "C09",
+      "target": "C15",
+      "type": "enables",
+      "description": "도메인 온톨로지가 능동 메타데이터의 스키마 정의에 활용"
+    },
+    {
+      "source": "C12",
+      "target": "C15",
+      "type": "enables",
+      "description": "FDE의 피드백 브릿지가 능동 메타데이터의 실시간 갱신에 기여"
+    }
+  ]
+}
