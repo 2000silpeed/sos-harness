@@ -1,0 +1,26 @@
+{
+  "id": "P06",
+  "name": "Natural Language Processing",
+  "name_ko": "자연어 처리",
+  "tier": -1,
+  "tier_name": "순수기초 (Pure Foundations)",
+  "description": "Tokenization, word embeddings, attention mechanism. Computational approaches to understanding and generating human language.",
+  "prerequisites": [],
+  "enables": ["F02", "F06"],
+  "agent": "foundations-researcher",
+  "keywords": ["tokenization", "word embedding", "attention mechanism", "Word2Vec", "GloVe", "named entity recognition", "POS tagging", "dependency parsing", "language model"],
+  "core_components": [
+    "토큰화 (Tokenization: BPE, WordPiece, SentencePiece)",
+    "단어 임베딩 (Word Embeddings: Word2Vec, GloVe, FastText)",
+    "어텐션 메커니즘 (Attention Mechanism)",
+    "개체명 인식 (Named Entity Recognition)",
+    "구문 분석 (Dependency Parsing)",
+    "언어 모델링 (Language Modeling: N-gram, Neural)"
+  ],
+  "development_patterns": [
+    "토크나이저 선택: 언어/도메인에 맞는 토크나이저 선택 (BPE for multilingual, WordPiece for BERT)",
+    "텍스트 전처리 파이프라인: 정규화 → 토큰화 → 불용어 처리 → 스테밍/레마타이제이션 표준화",
+    "도메인 적응: 범용 NLP 모델을 도메인 코퍼스로 fine-tuning하여 전문 용어 처리 능력 향상",
+    "평가 지표 체계: BLEU/ROUGE/BERTScore 등 태스크별 적합한 평가 메트릭 선정"
+  ]
+}
