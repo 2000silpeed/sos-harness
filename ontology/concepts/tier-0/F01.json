@@ -1,0 +1,27 @@
+{
+  "id": "F01",
+  "name": "Embeddings & Vector Space",
+  "name_ko": "임베딩과 벡터 공간",
+  "tier": 0,
+  "tier_name": "응용기초 (Applied Foundations)",
+  "description": "High-dimensional vectors, semantic similarity, HyDE, HNSW. Technology for representing text/concepts as dense vectors for similarity computation.",
+  "prerequisites": ["P01", "P02", "P05", "P08"],
+  "enables": ["C01", "C10"],
+  "agent": "applied-engineer",
+  "keywords": ["embedding model", "semantic similarity", "HyDE", "HNSW", "FAISS", "vector database", "dense retrieval", "sentence transformer", "dimensionality"],
+  "core_components": [
+    "밀집 벡터 표현 (Dense Vector Representations)",
+    "시맨틱 유사도 계산 (Semantic Similarity Computation)",
+    "HyDE (Hypothetical Document Embeddings)",
+    "HNSW 인덱스 (Hierarchical Navigable Small World)",
+    "벡터 데이터베이스 (Vector Databases: Pinecone, Weaviate, Qdrant)",
+    "문장 트랜스포머 (Sentence Transformers)"
+  ],
+  "development_patterns": [
+    "임베딩 모델 평가: MTEB 벤치마크로 도메인별 최적 임베딩 모델 선택",
+    "벡터 DB 인덱스 튜닝: ef_construction/M 파라미터 조정으로 recall/latency 트레이드오프 최적화",
+    "HyDE 적용: 검색 쿼리가 짧을 때 가상 문서 생성 후 임베딩하여 검색 품질 향상",
+    "임베딩 캐싱 전략: 자주 조회되는 문서 임베딩을 메모리에 캐싱하여 재계산 방지",
+    "멀티모달 임베딩: 텍스트/이미지/코드를 동일 벡터 공간에 매핑하여 교차 검색 구현"
+  ]
+}
