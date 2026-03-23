@@ -1,0 +1,57 @@
+{
+  "version": "1.0.0",
+  "description": "메타레버: 레버를 관리하는 레버. 여러 일반 레버의 합성",
+  "meta_levers": [
+    {
+      "id": "ML01",
+      "name": "precision-mode",
+      "name_ko": "정밀 모드",
+      "description": "정밀도 최대화. 모든 레버를 최대 깊이/범위로 설정",
+      "composed_levers": ["L01", "L02", "L03", "L04", "L05"],
+      "preset": {
+        "L01": { "min_depth": 4 },
+        "L02": { "expansion_radius": 0.9 },
+        "L03": { "path_depth": 5 },
+        "L04": { "recursion_depth": 7 },
+        "L05": { "abstraction_level": 3 }
+      },
+      "tradeoff": "최대 정밀도, 높은 비용과 시간"
+    },
+    {
+      "id": "ML02",
+      "name": "speed-mode",
+      "name_ko": "속도 모드",
+      "description": "속도 최대화. 최소 깊이, 필수 단계만 실행",
+      "composed_levers": ["L01", "L02", "L04", "L06"],
+      "preset": {
+        "L01": { "min_depth": 1 },
+        "L02": { "expansion_radius": 0.2 },
+        "L04": { "recursion_depth": 1 },
+        "L06": { "stages": ["lexical"] }
+      },
+      "tradeoff": "최대 속도, 정밀도 희생"
+    },
+    {
+      "id": "ML03",
+      "name": "balanced-mode",
+      "name_ko": "균형 모드",
+      "description": "정밀도와 속도의 균형. 기본값 사용",
+      "composed_levers": ["L01", "L02", "L03", "L04", "L05", "L06"],
+      "preset": "defaults",
+      "tradeoff": "균형잡힌 성능"
+    },
+    {
+      "id": "ML04",
+      "name": "security-mode",
+      "name_ko": "보안 모드",
+      "description": "보안 최대화. 접근 제어와 위상 분석 강화",
+      "composed_levers": ["L03", "L05", "L08"],
+      "preset": {
+        "L03": { "path_depth": 5 },
+        "L05": { "abstraction_level": 3 },
+        "L08": { "max_dimension": 4 }
+      },
+      "tradeoff": "최대 보안, 접근성 감소"
+    }
+  ]
+}
