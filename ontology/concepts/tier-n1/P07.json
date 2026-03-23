@@ -1,0 +1,26 @@
+{
+  "id": "P07",
+  "name": "Information Retrieval",
+  "name_ko": "정보 검색",
+  "tier": -1,
+  "tier_name": "순수기초 (Pure Foundations)",
+  "description": "Inverted index, TF-IDF, BM25, hybrid search. Principles of finding relevant information from large document collections.",
+  "prerequisites": [],
+  "enables": ["F02", "F03"],
+  "agent": "foundations-researcher",
+  "keywords": ["inverted index", "TF-IDF", "BM25", "relevance ranking", "precision", "recall", "query expansion", "hybrid search", "re-ranking"],
+  "core_components": [
+    "역색인 (Inverted Index)",
+    "TF-IDF 가중치 (Term Frequency-Inverse Document Frequency)",
+    "BM25 랭킹 (Okapi BM25)",
+    "적합성 판단 (Relevance Judgment)",
+    "쿼리 확장 (Query Expansion)",
+    "하이브리드 검색 (Sparse + Dense Retrieval)"
+  ],
+  "development_patterns": [
+    "검색 품질 평가 루프: nDCG/MRR 메트릭으로 검색 결과 지속 모니터링 및 개선",
+    "하이브리드 검색 가중치 튜닝: BM25(키워드) + Dense(시맨틱) 점수 비율 실험적 최적화",
+    "쿼리 분석 파이프라인: 의도 분류 → 쿼리 재작성 → 확장 → 검색 → 리랭킹 다단계 설계",
+    "인덱싱 전략: 문서 특성(길이/구조/갱신빈도)에 따른 청킹 및 인덱스 갱신 전략 수립"
+  ]
+}
