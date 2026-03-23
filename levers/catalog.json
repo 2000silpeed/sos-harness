@@ -1,0 +1,93 @@
+{
+  "version": "1.0.0",
+  "description": "SOS 레버 카탈로그. 파이프라인 파라미터를 변환하는 레버 정의",
+  "properties": {
+    "composability": "여러 레버를 결합하여 더 큰 레버 구성 가능",
+    "observability": "각 단계의 상태를 실시간 추적 가능",
+    "idempotency": "같은 입력 → 항상 같은 출력",
+    "resilience": "자동 재시도와 폴백 메커니즘",
+    "versioning": "변경 이력 유지와 롤백 가능"
+  },
+  "levers": [
+    {
+      "id": "L01",
+      "name": "depth-lever",
+      "name_ko": "깊이 레버",
+      "target_concept": "C01",
+      "target_stage": 2,
+      "description": "GraphRAG 커뮤니티 탐색 깊이 조절. C0-C3 중 몇 계층까지 탐색할지 결정",
+      "parameters": { "min_depth": 1, "max_depth": 4, "default": 2 },
+      "effect": "깊이 증가 → 더 정밀한 컨텍스트, 더 높은 비용"
+    },
+    {
+      "id": "L02",
+      "name": "precision-lever",
+      "name_ko": "정밀도 레버",
+      "target_concept": "C10",
+      "target_stage": 1,
+      "description": "벡터 의미 강화의 확장 범위 조절. 어휘확장 단계의 동의어/유사어 범위",
+      "parameters": { "expansion_radius": [0.1, 1.0], "default": 0.5 },
+      "effect": "범위 증가 → 더 넓은 의미 포착, 노이즈 증가 위험"
+    },
+    {
+      "id": "L03",
+      "name": "access-lever",
+      "name_ko": "접근 레버",
+      "target_concept": "C07",
+      "target_stage": 4,
+      "description": "ReBAC 접근 제어 세분화 수준 조절. 관계 경로 탐색 깊이",
+      "parameters": { "path_depth": [1, 5], "default": 3 },
+      "effect": "깊이 증가 → 더 세밀한 접근 제어, 복잡도 증가"
+    },
+    {
+      "id": "L04",
+      "name": "decomposition-lever",
+      "name_ko": "분해 레버",
+      "target_concept": "C14",
+      "target_stage": 6,
+      "description": "물리연산엔진의 프랙탈 재귀 분해 깊이 조절",
+      "parameters": { "recursion_depth": [1, 10], "default": 3 },
+      "effect": "깊이 증가 → O(log n) 향상, 에이전트 오버헤드 증가"
+    },
+    {
+      "id": "L05",
+      "name": "abstraction-lever",
+      "name_ko": "추상화 레버",
+      "target_concept": "C08",
+      "target_stage": 5,
+      "description": "메타온톨로지 추상화 수준 조절. Level 1(도메인)↔Level 2(메타)↔Level 3(보편원리)",
+      "parameters": { "abstraction_level": [1, 3], "default": 2 },
+      "effect": "수준 증가 → 더 범용적 패턴, 도메인 특수성 감소"
+    },
+    {
+      "id": "L06",
+      "name": "enrichment-lever",
+      "name_ko": "강화 레버",
+      "target_concept": "C10",
+      "target_stage": 1,
+      "description": "벡터 의미 강화 3단계 중 적용할 단계 선택",
+      "parameters": { "stages": ["lexical", "semantic", "ontology"], "default": "all" },
+      "effect": "단계 생략 → 속도 향상, 정밀도 감소"
+    },
+    {
+      "id": "L07",
+      "name": "community-lever",
+      "name_ko": "커뮤니티 레버",
+      "target_concept": "C01",
+      "target_stage": 2,
+      "description": "GraphRAG Leiden 커뮤니티 감지 해상도 조절",
+      "parameters": { "resolution": [0.1, 2.0], "default": 1.0 },
+      "effect": "해상도 증가 → 더 세분화된 커뮤니티, 노이즈 가능"
+    },
+    {
+      "id": "L08",
+      "name": "topology-lever",
+      "name_ko": "위상 레버",
+      "target_concept": "C05",
+      "target_stage": null,
+      "description": "위상적 지능 분석에서 Betti number 계산 차원 범위",
+      "parameters": { "max_dimension": [1, 5], "default": 2 },
+      "effect": "차원 증가 → 더 복잡한 위상 패턴 발견, 계산 비용 증가"
+    }
+  ]
+}
