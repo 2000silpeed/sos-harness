@@ -1,0 +1,27 @@
+{
+  "id": "C11",
+  "name": "NOMIK Framework",
+  "name_ko": "NOMIK 프레임워크",
+  "tier": 3,
+  "tier_name": "구현 (Implementation)",
+  "description": "17 node types, 23 edge types, 21 MCP tools, SCAN→STORE→QUERY pipeline. The comprehensive knowledge management framework integrating all SOS concepts into a unified implementation.",
+  "prerequisites": ["C06", "C07", "C08", "C09", "C10"],
+  "enables": [],
+  "agent": "implementation-lead",
+  "keywords": ["NOMIK", "17 node types", "23 edge types", "21 MCP tools", "SCAN", "STORE", "QUERY", "knowledge framework", "integrated system"],
+  "core_components": [
+    "17개 노드 타입 (Entity/Concept/Event/Process/Metric/... Node Types)",
+    "23개 엣지 타입 (Prerequisite/Enables/Contains/Causes/... Edge Types)",
+    "21개 MCP 도구 (SCAN/STORE/QUERY Tool Categories)",
+    "SCAN 파이프라인 (문서 스캔 → 엔티티 추출 → 관계 식별)",
+    "STORE 파이프라인 (정규화 → 저장 → 인덱싱)",
+    "QUERY 파이프라인 (쿼리 파싱 → 검색 → 응답 생성)"
+  ],
+  "development_patterns": [
+    "타입 카탈로그 관리: 17 노드/23 엣지 타입을 중앙 스키마 레지스트리로 관리하고 버전 추적",
+    "MCP 도구 조합: 21개 도구를 조합하여 복잡한 지식 관리 워크플로우를 선언적으로 정의",
+    "파이프라인 모니터링: SCAN→STORE→QUERY 각 단계의 처리량/지연시간/오류율 실시간 추적",
+    "확장 가능한 타입 시스템: 새 노드/엣지 타입 추가 시 기존 시스템과의 호환성 자동 검증",
+    "통합 테스트: 전체 SCAN→STORE→QUERY 파이프라인의 end-to-end 테스트 자동화"
+  ]
+}
