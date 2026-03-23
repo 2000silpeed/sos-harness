@@ -1,0 +1,26 @@
+{
+  "id": "P03",
+  "name": "Graph Theory",
+  "name_ko": "그래프 이론",
+  "tier": -1,
+  "tier_name": "순수기초 (Pure Foundations)",
+  "description": "Nodes, edges, triples, BFS/DFS, DAG. Mathematical foundation for representing structured relationships between entities.",
+  "prerequisites": [],
+  "enables": ["F04", "F05"],
+  "agent": "foundations-researcher",
+  "keywords": ["node", "edge", "triple", "BFS", "DFS", "DAG", "adjacency matrix", "shortest path", "connected component", "cycle detection"],
+  "core_components": [
+    "노드와 엣지 (Nodes & Edges)",
+    "트리플 (Subject-Predicate-Object Triples)",
+    "그래프 순회 (BFS/DFS Traversal)",
+    "유향 비순환 그래프 (DAG)",
+    "연결 성분 (Connected Components)",
+    "최단 경로 알고리즘 (Shortest Path: Dijkstra, A*)"
+  ],
+  "development_patterns": [
+    "의존성 해결에 위상 정렬 적용: 빌드 시스템/태스크 스케줄러에 DAG 기반 실행 순서 결정",
+    "순환 참조 감지: DFS 기반 사이클 탐지로 데이터 무결성 보장",
+    "N-hop 이웃 탐색: 추천 시스템에서 관계 깊이별 관련 엔티티 탐색",
+    "연결 성분 분석: 고립된 데이터 클러스터 식별 및 데이터 품질 진단"
+  ]
+}
