@@ -1,0 +1,26 @@
+{
+  "id": "C03",
+  "name": "Meta-Edge",
+  "name_ko": "메타엣지",
+  "tier": 1,
+  "tier_name": "핵심 (Core)",
+  "description": "Relationship about relationships, leverage effect, emergence. Second-order connections that define rules governing how other relationships behave.",
+  "prerequisites": ["F04", "F05"],
+  "enables": ["C07"],
+  "agent": "core-architect",
+  "keywords": ["meta-edge", "relationship of relationships", "leverage", "emergence", "second-order", "higher-order relation", "edge annotation", "relation rule"],
+  "core_components": [
+    "관계의 관계 (Relationships About Relationships)",
+    "레버리지 효과 (Leverage Effect: 1 Meta-Edge → N Edges Affected)",
+    "창발적 속성 (Emergent Properties from Meta-Edge Interactions)",
+    "엣지 어노테이션 (Edge Annotations & Metadata)",
+    "관계 규칙 (Relation Rules: Transitivity, Symmetry, Inheritance)",
+    "메타엣지 카탈로그 (Meta-Edge Type Catalog)"
+  ],
+  "development_patterns": [
+    "레버리지 분석: 메타엣지 변경 시 영향 받는 일반 엣지 수를 추적하여 변경 영향도 평가",
+    "메타엣지 기반 정책: 접근 제어/데이터 검증 규칙을 메타엣지로 정의하여 일괄 적용",
+    "창발 패턴 탐지: 메타엣지 조합에서 나타나는 예상치 못한 시스템 행동 모니터링",
+    "카탈로그 관리: 메타엣지 타입을 중앙 카탈로그로 관리하여 재사용성 확보"
+  ]
+}
