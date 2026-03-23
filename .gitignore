@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+.pnp.*
+.yarn/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+dist/
+build/
+.next/
+out/
+
+# Workspace outputs (generated per session)
+_workspace/
+
+# Local settings
+.claude/settings.local.json
