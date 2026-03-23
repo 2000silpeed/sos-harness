@@ -1,0 +1,27 @@
+{
+  "id": "F06",
+  "name": "LLMs & Prompt Engineering",
+  "name_ko": "LLM과 프롬프트 엔지니어링",
+  "tier": 0,
+  "tier_name": "응용기초 (Applied Foundations)",
+  "description": "Zero/few-shot learning, Chain-of-Thought, ReAct, hallucination reduction. Practical techniques for leveraging large language models.",
+  "prerequisites": ["P05", "P06", "P08"],
+  "enables": ["C02", "C04"],
+  "agent": "applied-engineer",
+  "keywords": ["zero-shot", "few-shot", "Chain-of-Thought", "ReAct", "hallucination", "prompt template", "system prompt", "function calling", "structured output"],
+  "core_components": [
+    "제로/퓨샷 학습 (Zero/Few-Shot Learning)",
+    "체인오브소트 (Chain-of-Thought Reasoning)",
+    "ReAct 패턴 (Reasoning + Acting)",
+    "환각 감소 (Hallucination Reduction Techniques)",
+    "함수 호출 (Function Calling / Tool Use)",
+    "구조화된 출력 (Structured Output: JSON mode, Schema validation)"
+  ],
+  "development_patterns": [
+    "프롬프트 버전 관리: 프롬프트를 코드처럼 버전 관리하고 A/B 테스트로 효과 검증",
+    "가드레일 설계: 입력 검증 → LLM 호출 → 출력 검증 → 폴백 처리 다층 안전장치",
+    "구조화된 출력 강제: JSON Schema/Pydantic 모델로 LLM 출력 형식 보장",
+    "프롬프트 체이닝: 복잡한 태스크를 여러 LLM 호출로 분해하여 단계별 품질 확보",
+    "비용 최적화: 프롬프트 캐싱, 모델 라우팅(간단한 요청은 소형 모델)으로 비용 절감"
+  ]
+}
