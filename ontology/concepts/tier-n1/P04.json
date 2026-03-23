@@ -1,0 +1,26 @@
+{
+  "id": "P04",
+  "name": "Database Fundamentals",
+  "name_ko": "데이터베이스 기초",
+  "tier": -1,
+  "tier_name": "순수기초 (Pure Foundations)",
+  "description": "RDBMS, ACID, NoSQL, index-free adjacency. Core principles of data persistence, querying, and consistency.",
+  "prerequisites": [],
+  "enables": ["F05"],
+  "agent": "foundations-researcher",
+  "keywords": ["RDBMS", "ACID", "NoSQL", "index-free adjacency", "transaction", "normalization", "B-tree", "LSM-tree", "CAP theorem"],
+  "core_components": [
+    "관계형 모델 (Relational Model & Normalization)",
+    "ACID 트랜잭션 (Atomicity, Consistency, Isolation, Durability)",
+    "NoSQL 패러다임 (Document, Key-Value, Column-Family, Graph)",
+    "인덱스 전략 (B-tree, LSM-tree, Index-Free Adjacency)",
+    "CAP 정리 (Consistency, Availability, Partition Tolerance)",
+    "쿼리 최적화 (Query Planning & Optimization)"
+  ],
+  "development_patterns": [
+    "저장소 선택 매트릭스: 읽기/쓰기 비율, 일관성 요구, 관계 복잡도에 따른 DB 엔진 선택",
+    "스키마 진화 관리: 마이그레이션 스크립트 버전 관리로 무중단 스키마 변경",
+    "인덱스 전략 최적화: 쿼리 패턴 분석 후 복합 인덱스/커버링 인덱스 설계",
+    "트랜잭션 경계 설계: 비즈니스 연산 단위에 맞는 트랜잭션 범위 결정"
+  ]
+}
