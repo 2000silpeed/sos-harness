@@ -1,0 +1,26 @@
+{
+  "id": "F02",
+  "name": "Semantic Search",
+  "name_ko": "시맨틱 검색",
+  "tier": 0,
+  "tier_name": "응용기초 (Applied Foundations)",
+  "description": "Hybrid search, bi-encoder/cross-encoder, chunking strategies. Finding information by meaning rather than keyword matching.",
+  "prerequisites": ["P02", "P06", "P07"],
+  "enables": ["C01"],
+  "agent": "applied-engineer",
+  "keywords": ["hybrid search", "bi-encoder", "cross-encoder", "chunking", "re-ranking", "semantic matching", "ColBERT", "late interaction", "passage retrieval"],
+  "core_components": [
+    "하이브리드 검색 (Hybrid Search: Sparse + Dense)",
+    "바이인코더 (Bi-Encoder for Retrieval)",
+    "크로스인코더 (Cross-Encoder for Re-ranking)",
+    "청킹 전략 (Chunking: Fixed/Semantic/Recursive)",
+    "리랭킹 파이프라인 (Re-ranking Pipeline)",
+    "후기 상호작용 모델 (Late Interaction: ColBERT)"
+  ],
+  "development_patterns": [
+    "2단계 검색: 바이인코더로 후보 100개 검색 → 크로스인코더로 Top-K 리랭킹",
+    "청킹 전략 선택: 문서 구조에 따라 고정길이/시맨틱/재귀적 청킹 전략 결정",
+    "검색 품질 피드백 루프: 사용자 클릭 데이터로 검색 모델 지속 개선",
+    "멀티테넌트 검색: 네임스페이스/필터 기반 테넌트 격리로 보안 유지하며 검색 제공"
+  ]
+}
