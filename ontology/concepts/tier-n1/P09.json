@@ -1,0 +1,26 @@
+{
+  "id": "P09",
+  "name": "API Architecture",
+  "name_ko": "API 아키텍처",
+  "tier": -1,
+  "tier_name": "순수기초 (Pure Foundations)",
+  "description": "REST, event-driven, MCP protocol. Design principles for building interoperable and scalable service interfaces.",
+  "prerequisites": [],
+  "enables": ["F10"],
+  "agent": "foundations-researcher",
+  "keywords": ["REST", "GraphQL", "gRPC", "event-driven", "MCP", "webhook", "API gateway", "rate limiting", "versioning", "OpenAPI"],
+  "core_components": [
+    "RESTful 설계 원칙 (REST Constraints)",
+    "이벤트 기반 아키텍처 (Event-Driven Architecture)",
+    "MCP 프로토콜 (Model Context Protocol)",
+    "API 게이트웨이 (API Gateway Pattern)",
+    "API 버전 관리 (API Versioning Strategies)",
+    "비동기 통신 (Async Communication: Message Queue, Pub/Sub)"
+  ],
+  "development_patterns": [
+    "API-First 설계: OpenAPI 스펙 작성 → 코드 생성 → 구현 → 테스트 순서로 개발",
+    "이벤트 소싱 적용: 상태 변경을 이벤트 스트림으로 기록하여 재현성/감사 추적 확보",
+    "서킷 브레이커 패턴: 외부 API 호출 실패 시 폴백/재시도 전략으로 시스템 안정성 확보",
+    "API 진화 전략: URL 버전 vs 헤더 버전 vs content negotiation 중 하위호환 전략 선택"
+  ]
+}
