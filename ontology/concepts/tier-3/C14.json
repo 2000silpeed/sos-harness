@@ -1,0 +1,27 @@
+{
+  "id": "C14",
+  "name": "Physical Computation Engine",
+  "name_ko": "물리연산엔진",
+  "tier": 3,
+  "tier_name": "구현 (Implementation)",
+  "description": "Fractal recursive decomposition, O(n^2)→O(log n) complexity reduction, 3 computation patterns. Engine that decomposes complex problems into self-similar sub-problems for parallel agent execution.",
+  "prerequisites": ["C08", "C13"],
+  "enables": [],
+  "agent": "implementation-lead",
+  "keywords": ["physical computation", "fractal decomposition", "recursive", "parallel execution", "complexity reduction", "O(log n)", "agent team", "self-similar", "divide and conquer"],
+  "core_components": [
+    "프랙탈 재귀 분해 (Fractal Recursive Decomposition)",
+    "복잡도 감소 (O(n^2) → O(log n) Complexity Reduction)",
+    "3가지 연산 패턴 (Sequential / Parallel / Recursive Patterns)",
+    "병렬 에이전트 실행 (Parallel Agent Team Execution)",
+    "자기유사 작동 (Self-Similar Operation: Agent = Agent Team)",
+    "결과 합성 (Result Synthesis from Sub-computations)"
+  ],
+  "development_patterns": [
+    "프랙탈 분해 규칙: 문제를 자기유사 하위 문제로 분해하는 규칙을 메타온톨로지에서 추출",
+    "병렬 실행 스케줄러: DAG 기반 의존성 분석 후 독립 하위 문제를 병렬 에이전트에 분배",
+    "결과 합성 전략: 하위 결과를 상위 결과로 합성하는 규칙을 레버로 파라미터화",
+    "자기유사성 검증: 개별 에이전트와 에이전트 팀의 인터페이스가 동일함을 테스트로 검증",
+    "성능 벤치마크: 분해 전/후 복잡도를 측정하여 O(n^2)→O(log n) 달성 여부 확인"
+  ]
+}
