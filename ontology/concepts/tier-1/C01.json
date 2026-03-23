@@ -1,0 +1,27 @@
+{
+  "id": "C01",
+  "name": "GraphRAG",
+  "name_ko": "GraphRAG",
+  "tier": 1,
+  "tier_name": "핵심 (Core)",
+  "description": "6-stage indexing pipeline, Leiden community detection, DRIFT traversal. Graph-enhanced retrieval-augmented generation that combines knowledge graph structure with vector-based retrieval.",
+  "prerequisites": ["F01", "F02", "F03", "F04", "F05"],
+  "enables": ["C06", "C10"],
+  "agent": "core-architect",
+  "keywords": ["GraphRAG", "6-stage indexing", "Leiden", "DRIFT", "community detection", "global search", "local search", "entity extraction", "community summary"],
+  "core_components": [
+    "6단계 인덱싱 파이프라인 (Chunking → Entity Extraction → Graph Building → Community Detection → Summary Generation → Query Processing)",
+    "Leiden 커뮤니티 감지 (Leiden Community Detection Algorithm)",
+    "DRIFT 순회 (Dynamic Retrieval over Interconnected Fragments and Texts)",
+    "전역 검색 (Global Search via Community Summaries)",
+    "지역 검색 (Local Search via Entity Neighborhoods)",
+    "그래프-벡터 하이브리드 검색 (Graph-Vector Hybrid Retrieval)"
+  ],
+  "development_patterns": [
+    "인덱싱 파이프라인 분리: 6단계를 독립 마이크로서비스로 분리하여 병렬 처리 및 재시도 가능",
+    "커뮤니티 해상도 튜닝: Leiden 알고리즘의 resolution 파라미터로 커뮤니티 세밀도 조정",
+    "글로벌/로컬 검색 라우팅: 쿼리 의도 분류 → 글로벌(요약형) 또는 로컬(구체적) 검색으로 분기",
+    "증분 인덱싱: 전체 재구축 대신 변경된 문서만 재인덱싱하여 운영 효율 확보",
+    "검색 품질 모니터링: 커뮤니티 커버리지, 엔티티 추출률, 검색 적합도를 지속 추적"
+  ]
+}
