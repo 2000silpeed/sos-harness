@@ -1,0 +1,26 @@
+{
+  "id": "F09",
+  "name": "Access Control",
+  "name_ko": "접근 제어",
+  "tier": 0,
+  "tier_name": "응용기초 (Applied Foundations)",
+  "description": "RBAC→ABAC→ReBAC evolution, RLS, JWT filtering. Applied access control mechanisms for multi-tenant systems.",
+  "prerequisites": ["P10"],
+  "enables": ["C04", "C07"],
+  "agent": "applied-engineer",
+  "keywords": ["RBAC", "ABAC", "ReBAC", "RLS", "JWT", "row-level security", "policy engine", "Zanzibar", "OPA", "Cedar"],
+  "core_components": [
+    "역할 기반 접근 제어 (RBAC)",
+    "속성 기반 접근 제어 (ABAC)",
+    "관계 기반 접근 제어 (ReBAC)",
+    "행 수준 보안 (Row-Level Security)",
+    "JWT 기반 필터링 (JWT Claims Filtering)",
+    "정책 엔진 (Policy Engines: OPA, Cedar)"
+  ],
+  "development_patterns": [
+    "접근 제어 진화 경로: RBAC(역할 폭발) → ABAC(속성 조합) → ReBAC(관계 경로) 단계적 도입",
+    "정책 as 코드: 접근 제어 정책을 코드로 관리하여 버전 관리/테스트/감사 추적 가능",
+    "다중 테넌트 격리: RLS + JWT 필터링으로 데이터 레이어에서 테넌트 간 격리 보장",
+    "정책 시뮬레이션: 새 정책 배포 전 기존 요청 로그로 영향 범위 시뮬레이션"
+  ]
+}
