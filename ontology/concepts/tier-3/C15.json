@@ -1,0 +1,27 @@
+{
+  "id": "C15",
+  "name": "Active Metadata + Adaptive UI",
+  "name_ko": "능동메타데이터",
+  "tier": 3,
+  "tier_name": "구현 (Implementation)",
+  "description": "Real-time cascade updates, GraphRAG+ReBAC→Adaptive UI. Metadata that actively drives system behavior, triggering cascading changes and adapting user interfaces based on context and permissions.",
+  "prerequisites": ["C09", "C12"],
+  "enables": [],
+  "agent": "implementation-lead",
+  "keywords": ["active metadata", "adaptive UI", "real-time cascade", "metadata-driven", "GraphRAG+ReBAC", "context-aware", "dynamic interface", "cascade propagation"],
+  "core_components": [
+    "실시간 캐스케이드 (Real-time Cascade: 메타데이터 변경 → 연쇄 갱신)",
+    "GraphRAG + ReBAC 통합 UI (검색 결과에 접근 제어 적용한 적응형 인터페이스)",
+    "메타데이터 주도 행동 (Metadata-Driven System Behavior)",
+    "컨텍스트 인식 적응 (Context-Aware Adaptation)",
+    "동적 인터페이스 생성 (Dynamic Interface Generation from Ontology)",
+    "캐스케이드 전파 규칙 (Cascade Propagation Rules & Limits)"
+  ],
+  "development_patterns": [
+    "이벤트 기반 캐스케이드: 메타데이터 변경 이벤트 → 영향 범위 계산 → 캐스케이드 전파 → 확인",
+    "적응형 UI 생성: 온톨로지 스키마 + 사용자 권한(ReBAC) + 컨텍스트로 UI 동적 생성",
+    "캐스케이드 범위 제한: 무한 전파 방지를 위한 깊이 제한/순환 감지 가드레일 설계",
+    "메타데이터 변경 감사: 모든 메타데이터 변경과 캐스케이드 결과를 감사 로그에 기록",
+    "A/B 테스트: 적응형 UI 변형을 사용자 세그먼트별로 테스트하여 최적 인터페이스 탐색"
+  ]
+}
