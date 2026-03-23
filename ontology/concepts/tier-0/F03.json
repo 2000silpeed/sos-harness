@@ -1,0 +1,26 @@
+{
+  "id": "F03",
+  "name": "RAG (Retrieval-Augmented Generation)",
+  "name_ko": "검색 증강 생성",
+  "tier": 0,
+  "tier_name": "응용기초 (Applied Foundations)",
+  "description": "Offline indexing, online retrieval, faithfulness evaluation. Combining retrieval with generation to ground LLM responses in factual data.",
+  "prerequisites": ["P05", "P07"],
+  "enables": ["C01"],
+  "agent": "applied-engineer",
+  "keywords": ["retrieval augmented generation", "indexing pipeline", "retrieval", "generation", "faithfulness", "hallucination", "grounding", "context window", "prompt stuffing"],
+  "core_components": [
+    "오프라인 인덱싱 (Offline Indexing Pipeline)",
+    "온라인 검색-생성 (Online Retrieval-Generation)",
+    "충실도 평가 (Faithfulness Evaluation)",
+    "컨텍스트 윈도우 관리 (Context Window Management)",
+    "환각 감소 전략 (Hallucination Reduction)",
+    "RAG 평가 프레임워크 (RAGAS, TruLens)"
+  ],
+  "development_patterns": [
+    "RAG 파이프라인 모듈화: 인덱서/검색기/생성기를 독립 모듈로 분리하여 개별 최적화",
+    "충실도 검증: 생성된 답변의 출처 추적 가능성 확보 (citation, source attribution)",
+    "컨텍스트 압축: 검색된 문서를 요약/필터링하여 컨텍스트 윈도우 효율적 활용",
+    "RAG 평가 체계: 적합성(relevancy), 충실도(faithfulness), 답변 유사도를 체계적으로 측정"
+  ]
+}
