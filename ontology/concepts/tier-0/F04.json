@@ -1,0 +1,26 @@
+{
+  "id": "F04",
+  "name": "Knowledge Graphs",
+  "name_ko": "지식 그래프",
+  "tier": 0,
+  "tier_name": "응용기초 (Applied Foundations)",
+  "description": "Triples, RDF/property graphs, TBox/ABox, N-hop traversal. Structured representation of real-world knowledge as interconnected entities.",
+  "prerequisites": ["P03"],
+  "enables": ["C01", "C02", "C03", "C05"],
+  "agent": "applied-engineer",
+  "keywords": ["triple", "RDF", "property graph", "TBox", "ABox", "N-hop", "entity", "relation", "ontology alignment", "knowledge extraction"],
+  "core_components": [
+    "트리플 구조 (Subject-Predicate-Object Triples)",
+    "RDF와 프로퍼티 그래프 (RDF vs Property Graph Models)",
+    "TBox/ABox 분리 (Terminological Box / Assertion Box)",
+    "N-hop 순회 (N-hop Neighborhood Traversal)",
+    "지식 추출 (Knowledge Extraction from Text)",
+    "온톨로지 정렬 (Ontology Alignment)"
+  ],
+  "development_patterns": [
+    "점진적 KG 구축: 핵심 엔티티/관계부터 시작 → 확장 → 검증 → 정제 반복 사이클",
+    "TBox/ABox 분리 설계: 스키마(TBox)와 인스턴스(ABox) 독립 관리로 스키마 진화 용이",
+    "지식 추출 파이프라인: NER → 관계 추출 → 엔티티 링킹 → 지식 융합 자동화",
+    "KG 품질 관리: 완전성/일관성/시의성 메트릭으로 지식 그래프 품질 지속 모니터링"
+  ]
+}
