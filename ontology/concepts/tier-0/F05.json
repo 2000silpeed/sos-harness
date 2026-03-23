@@ -1,0 +1,26 @@
+{
+  "id": "F05",
+  "name": "Graph Databases & Querying",
+  "name_ko": "그래프 데이터베이스",
+  "tier": 0,
+  "tier_name": "응용기초 (Applied Foundations)",
+  "description": "Cypher, index-free adjacency, community detection. Storage and querying of highly connected data using graph-native engines.",
+  "prerequisites": ["P03", "P04"],
+  "enables": ["C01", "C03"],
+  "agent": "applied-engineer",
+  "keywords": ["Cypher", "Gremlin", "Neo4j", "index-free adjacency", "community detection", "Leiden", "Louvain", "graph partitioning", "property graph store"],
+  "core_components": [
+    "Cypher 쿼리 언어 (Cypher Query Language)",
+    "인덱스 프리 인접성 (Index-Free Adjacency)",
+    "커뮤니티 감지 (Community Detection: Leiden, Louvain)",
+    "그래프 파티셔닝 (Graph Partitioning)",
+    "그래프 프로젝션 (Graph Projections for Analytics)",
+    "그래프 알고리즘 라이브러리 (PageRank, Betweenness Centrality)"
+  ],
+  "development_patterns": [
+    "데이터 모델링: 화이트보드 → 노드/관계 식별 → Cypher 패턴 → 쿼리 최적화 순서",
+    "커뮤니티 감지 활용: Leiden 알고리즘으로 데이터 클러스터 식별 후 요약/분류에 활용",
+    "그래프 알고리즘 파이프라인: 그래프 프로젝션 → 알고리즘 실행 → 결과 저장 → 시각화",
+    "성능 최적화: 관계 방향/타입 필터, 노드 라벨 인덱스로 순회 범위 제한"
+  ]
+}
