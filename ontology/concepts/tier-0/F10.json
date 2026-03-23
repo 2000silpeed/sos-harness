@@ -1,0 +1,27 @@
+{
+  "id": "F10",
+  "name": "Agents & Orchestration",
+  "name_ko": "에이전트와 오케스트레이션",
+  "tier": 0,
+  "tier_name": "응용기초 (Applied Foundations)",
+  "description": "Perceive/reason/act/memory loop, ReAct pattern, MCP tools, fractal decomposition. Building autonomous AI agents that can plan and execute tasks.",
+  "prerequisites": ["P05", "P09"],
+  "enables": ["C04"],
+  "agent": "applied-engineer",
+  "keywords": ["agent loop", "perceive", "reason", "act", "memory", "ReAct", "MCP", "tool use", "orchestration", "fractal decomposition", "multi-agent"],
+  "core_components": [
+    "에이전트 루프 (Perceive → Reason → Act → Memory)",
+    "ReAct 패턴 (Reasoning + Acting Interleaving)",
+    "MCP 도구 통합 (Model Context Protocol Tools)",
+    "프랙탈 분해 (Fractal Task Decomposition)",
+    "멀티 에이전트 오케스트레이션 (Multi-Agent Orchestration)",
+    "에이전트 메모리 (Short-term / Long-term Memory Management)"
+  ],
+  "development_patterns": [
+    "에이전트 관찰성 확보: 모든 perceive/reason/act 단계를 구조화 로깅으로 디버깅 가능하게",
+    "도구 안전성 설계: 도구 호출 전 파라미터 검증, 부작용 제한, 롤백 메커니즘 구현",
+    "에스컬레이션 정책: 에이전트 확신도 < 임계값 시 사람에게 에스컬레이션하는 가드레일",
+    "멀티 에이전트 통신: 공유 메모리 vs 메시지 패싱 vs 계층적 위임 중 태스크에 맞는 패턴 선택",
+    "프랙탈 재귀 분해: 복잡한 태스크를 자기유사 하위 태스크로 재귀적으로 분해하여 병렬 실행"
+  ]
+}
