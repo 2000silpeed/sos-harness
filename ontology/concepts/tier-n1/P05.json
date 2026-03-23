@@ -1,0 +1,27 @@
+{
+  "id": "P05",
+  "name": "AI/ML Fundamentals",
+  "name_ko": "AI/ML 기초",
+  "tier": -1,
+  "tier_name": "순수기초 (Pure Foundations)",
+  "description": "Supervised/unsupervised/RL, backpropagation, loss functions. Core machine learning paradigms and training methodologies.",
+  "prerequisites": [],
+  "enables": ["F01", "F03", "F06", "F10"],
+  "agent": "foundations-researcher",
+  "keywords": ["supervised learning", "unsupervised learning", "reinforcement learning", "backpropagation", "loss function", "gradient descent", "overfitting", "regularization", "neural network"],
+  "core_components": [
+    "지도/비지도/강화학습 (Supervised/Unsupervised/RL)",
+    "역전파 (Backpropagation)",
+    "손실 함수 (Loss Functions: Cross-Entropy, MSE)",
+    "경사 하강법 (Gradient Descent & Optimizers)",
+    "정규화 (Regularization: L1/L2, Dropout)",
+    "모델 평가 (Precision, Recall, F1, AUC-ROC)"
+  ],
+  "development_patterns": [
+    "실험 추적 체계: MLflow/W&B로 하이퍼파라미터, 메트릭, 모델 아티팩트 버전 관리",
+    "학습/서빙 불일치 방지: feature store로 학습-추론 피처 일관성 보장",
+    "점진적 복잡도 전략: 규칙 기반 → 선형 모델 → 앙상블 → 딥러닝 순서로 베이스라인 수립",
+    "데이터 중심 접근: 모델 변경보다 데이터 품질/라벨링 개선에 우선 투자",
+    "A/B 테스트 파이프라인: 모델 배포 시 카나리 배포 → 실험 그룹 비교 → 점진적 롤아웃"
+  ]
+}
