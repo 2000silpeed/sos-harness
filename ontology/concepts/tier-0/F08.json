@@ -1,0 +1,26 @@
+{
+  "id": "F08",
+  "name": "Topology Basics",
+  "name_ko": "위상수학 기초",
+  "tier": 0,
+  "tier_name": "응용기초 (Applied Foundations)",
+  "description": "TDA, persistent homology, simplicial complexes. Mathematical tools for analyzing shape and structure of data.",
+  "prerequisites": ["P02"],
+  "enables": ["C05"],
+  "agent": "applied-engineer",
+  "keywords": ["TDA", "persistent homology", "simplicial complex", "Betti numbers", "persistence diagram", "filtration", "topological features", "Mapper algorithm"],
+  "core_components": [
+    "위상적 데이터 분석 (Topological Data Analysis / TDA)",
+    "퍼시스턴트 호몰로지 (Persistent Homology)",
+    "단체 복합체 (Simplicial Complexes)",
+    "베티 수 (Betti Numbers)",
+    "퍼시스턴스 다이어그램 (Persistence Diagrams)",
+    "Mapper 알고리즘 (Topological Mapper)"
+  ],
+  "development_patterns": [
+    "데이터 형상 분석: TDA로 고차원 데이터의 구조적 특성(구멍, 연결, 클러스터) 추출",
+    "피처 엔지니어링: 퍼시스턴스 다이어그램을 ML 모델의 위상적 피처로 변환",
+    "노이즈 견고성 활용: 위상적 피처의 노이즈 견고성을 활용하여 안정적 분류기 구축",
+    "그래프 구조 요약: 대규모 그래프의 위상적 요약으로 구조적 패턴 빠르게 파악"
+  ]
+}
