@@ -1,0 +1,30 @@
+{
+  "description": "메타엣지: 관계의 관계를 정의하는 규칙",
+  "meta_edges": [
+    {
+      "id": "ME01",
+      "name": "계층적 의존성",
+      "rule": "Tier N 개념은 Tier N-1 선행 개념의 CMR Level 2+ 필요",
+      "affected_edges": "all prerequisite edges",
+      "leverage": "메타엣지 1개 변경 → 모든 하위 일반 엣지에 연쇄 영향"
+    },
+    {
+      "id": "ME02",
+      "name": "파이프라인 순서",
+      "rule": "파이프라인 stage N은 stage N-1 완료 후 실행",
+      "affected_edges": "pipeline stage transitions"
+    },
+    {
+      "id": "ME03",
+      "name": "온톨로지 통합",
+      "rule": "하나의 온톨로지가 검색구조 + 온톨로지 + 접근제어 3가지 기능을 동시 수행",
+      "affected_edges": "C02-C07, C02-C01 relationships"
+    },
+    {
+      "id": "ME04",
+      "name": "프랙탈 자기유사성",
+      "rule": "개별 에이전트의 작동 방식 = 에이전트 팀의 작동 방식 (동일 구조 재귀)",
+      "affected_edges": "C14 computation patterns"
+    }
+  ]
+}
