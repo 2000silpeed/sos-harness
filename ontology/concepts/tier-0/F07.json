@@ -1,0 +1,26 @@
+{
+  "id": "F07",
+  "name": "Bayesian Reasoning",
+  "name_ko": "베이지안 추론",
+  "tier": 0,
+  "tier_name": "응용기초 (Applied Foundations)",
+  "description": "Bayesian networks, conditional probability, DAG-based inference. Principled approach to updating beliefs with evidence.",
+  "prerequisites": ["P01"],
+  "enables": ["C05"],
+  "agent": "applied-engineer",
+  "keywords": ["Bayesian network", "conditional probability", "DAG", "prior", "posterior", "likelihood", "MCMC", "variational inference", "causal inference"],
+  "core_components": [
+    "베이지안 네트워크 (Bayesian Networks / Belief Networks)",
+    "사전/사후 분포 (Prior & Posterior Distributions)",
+    "우도 함수 (Likelihood Function)",
+    "MCMC 추론 (Markov Chain Monte Carlo)",
+    "변분 추론 (Variational Inference)",
+    "인과 추론 (Causal Inference with Bayesian DAGs)"
+  ],
+  "development_patterns": [
+    "사전 분포 선택: 도메인 전문가 지식을 정보적 사전분포로 인코딩하여 수렴 가속",
+    "온라인 베이지안 갱신: 새 데이터 도착 시 사후분포를 점진적으로 갱신하는 스트리밍 파이프라인",
+    "모델 비교: 베이즈 팩터/WAIC로 경쟁 모델 비교 및 선택",
+    "불확실성 전파: 시스템 각 단계의 불확실성을 다음 단계로 전파하여 최종 신뢰도 산출"
+  ]
+}
