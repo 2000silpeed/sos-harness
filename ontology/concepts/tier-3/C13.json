@@ -1,0 +1,27 @@
+{
+  "id": "C13",
+  "name": "Lever/Meta-Lever",
+  "name_ko": "레버/메타레버",
+  "tier": 3,
+  "tier_name": "구현 (Implementation)",
+  "description": "5 properties: composability/observability/idempotency/resilience/versioning, Hub-Spoke topology. Parameterization points that control and optimize pipeline behavior.",
+  "prerequisites": ["C05", "C06"],
+  "enables": ["C14"],
+  "agent": "implementation-lead",
+  "keywords": ["lever", "meta-lever", "composability", "observability", "idempotency", "resilience", "versioning", "Hub-Spoke", "parameter tuning", "pipeline control"],
+  "core_components": [
+    "합성성 (Composability: 레버 간 조합 가능성)",
+    "관측성 (Observability: 레버 효과의 측정 가능성)",
+    "멱등성 (Idempotency: 동일 입력 → 동일 결과 보장)",
+    "회복성 (Resilience: 레버 실패 시 시스템 안정성 유지)",
+    "버전 관리 (Versioning: 레버 설정의 이력 추적)",
+    "Hub-Spoke 토폴로지 (메타레버(Hub)가 레버들(Spoke)을 조율)"
+  ],
+  "development_patterns": [
+    "레버 카탈로그: 모든 조정 가능한 파라미터를 레버로 등록하고 5가지 속성을 명시",
+    "메타레버 설계: Hub-Spoke 구조로 메타레버 1개가 여러 레버를 동시에 조정하는 패턴",
+    "관측성 우선: 모든 레버에 효과 측정 메트릭을 먼저 정의한 후 조정 기능 구현",
+    "멱등성 보장: 레버 적용을 반복해도 동일 결과가 나오도록 설계하여 안전한 재시도 가능",
+    "버전별 비교: 레버 설정의 버전별 성과를 비교하여 최적 설정 탐색"
+  ]
+}
