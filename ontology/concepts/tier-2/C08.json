@@ -1,0 +1,26 @@
+{
+  "id": "C08",
+  "name": "Meta-Ontology",
+  "name_ko": "메타온톨로지",
+  "tier": 2,
+  "tier_name": "프레임워크 (Framework)",
+  "description": "Ontology for creating ontologies, 3-level abstraction (domain→meta→universal principles). Framework for extracting cross-domain patterns from domain-specific ontologies.",
+  "prerequisites": ["C02"],
+  "enables": ["C11", "C14"],
+  "agent": "framework-designer",
+  "keywords": ["meta-ontology", "ontology of ontologies", "3-level abstraction", "universal principles", "cross-domain patterns", "ontology template", "meta-modeling"],
+  "core_components": [
+    "3단계 추상화 (Level 1: Domain → Level 2: Meta → Level 3: Universal Principles)",
+    "도메인 횡단 패턴 추출 (Cross-Domain Pattern Extraction)",
+    "온톨로지 생성 온톨로지 (Ontology for Creating Ontologies)",
+    "보편 원리 (Universal Principles: 인과/계층/시간/구성)",
+    "온톨로지 템플릿 (Reusable Ontology Templates)",
+    "메타 모델링 (Meta-Modeling: MOF/M0-M3 Layers)"
+  ],
+  "development_patterns": [
+    "템플릿 기반 온톨로지 생성: 메타온톨로지 템플릿으로 새 도메인 온톨로지 신속 구축",
+    "패턴 라이브러리: 도메인 간 공통 패턴(계층/시간/인과)을 라이브러리화하여 재사용",
+    "추상화 수준 관리: Level 1↔2↔3 간 자동 매핑으로 구체적↔추상적 전환 지원",
+    "메타온톨로지 진화: 새 도메인 온톨로지 추가 시 메타 패턴 자동 갱신 피드백 루프"
+  ]
+}
