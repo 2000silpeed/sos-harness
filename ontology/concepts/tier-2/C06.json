@@ -1,0 +1,27 @@
+{
+  "id": "C06",
+  "name": "Six Analysis Spaces",
+  "name_ko": "6분석공간",
+  "tier": 2,
+  "tier_name": "프레임워크 (Framework)",
+  "description": "Hierarchy/Temporal/Recursive/Structural/Causal/Cross-space analysis framework. Six complementary perspectives for comprehensive knowledge analysis.",
+  "prerequisites": ["C01", "C02", "C04", "C05"],
+  "enables": ["C11", "C12", "C13"],
+  "agent": "framework-designer",
+  "keywords": ["six spaces", "hierarchy analysis", "temporal analysis", "recursive analysis", "structural analysis", "causal analysis", "cross-space analysis", "multi-perspective"],
+  "core_components": [
+    "계층 공간 (Hierarchy Space: 상위/하위 관계 분석)",
+    "시간 공간 (Temporal Space: 시간축 변화 추적)",
+    "재귀 공간 (Recursive Space: 자기유사 패턴 탐지)",
+    "구조 공간 (Structural Space: 위상적 구조 분석)",
+    "인과 공간 (Causal Space: 원인-결과 관계 추론)",
+    "교차 공간 (Cross-Space: 공간 간 패턴 교차 분석)"
+  ],
+  "development_patterns": [
+    "다차원 분석 파이프라인: 6개 공간을 병렬로 분석 → 교차공간에서 통합 → 인사이트 도출",
+    "공간별 전문 에이전트: 각 분석 공간에 특화된 에이전트를 할당하여 분석 깊이 확보",
+    "교차공간 패턴: 두 개 이상의 공간에서 동시에 나타나는 패턴은 높은 신뢰도 부여",
+    "분석 결과 캐싱: 각 공간의 분석 결과를 캐싱하여 교차 분석 시 재계산 방지",
+    "점진적 깊이 분석: 전체 공간 얕은 스캔 → 유의미한 공간 깊은 분석 → 교차 분석 순서"
+  ]
+}
