@@ -1,0 +1,27 @@
+{
+  "id": "C02",
+  "name": "Ontology",
+  "name_ko": "온톨로지",
+  "tier": 1,
+  "tier_name": "핵심 (Core)",
+  "description": "Classes/properties/relationships/axioms, Palantir Object/Link/Action/Property types. Formal specification of conceptualization that structures knowledge into rigorous, machine-interpretable schemas.",
+  "prerequisites": ["F04", "F06"],
+  "enables": ["C06", "C07", "C08", "C09"],
+  "agent": "core-architect",
+  "keywords": ["ontology", "class", "property", "relationship", "axiom", "OWL", "Palantir Object Type", "Link Type", "Action Type", "schema"],
+  "core_components": [
+    "클래스 계층 (Class Hierarchy / Taxonomy)",
+    "속성 정의 (Properties: Data Properties, Object Properties)",
+    "관계 타입 (Relationship Types with Cardinality)",
+    "공리 (Axioms: Constraints, Rules, Inferences)",
+    "Palantir 타입 시스템 (Object/Link/Action/Property Types)",
+    "온톨로지 진화 (Ontology Versioning & Evolution)"
+  ],
+  "development_patterns": [
+    "온톨로지 우선 설계: 도메인 모델링을 온톨로지로 시작 → API/DB 스키마 자동 생성",
+    "3가지 기능 통합: 하나의 온톨로지로 검색구조(GraphRAG) + 의미구조(Ontology) + 접근제어(ReBAC) 동시 지원",
+    "점진적 공리 추가: 단순 분류 체계에서 시작하여 규칙/제약조건을 점진적으로 추가",
+    "LLM 기반 온톨로지 구축: 텍스트에서 클래스/관계 자동 추출 후 전문가 검증 워크플로우",
+    "온톨로지 정합성 검증: 추론 엔진으로 모순/미정의 관계 자동 탐지"
+  ]
+}
