@@ -1,0 +1,26 @@
+{
+  "id": "P02",
+  "name": "Vector Mathematics",
+  "name_ko": "벡터 수학",
+  "tier": -1,
+  "tier_name": "순수기초 (Pure Foundations)",
+  "description": "Cosine similarity, embeddings, dimensionality reduction. Mathematical foundation for representing and comparing meanings in high-dimensional spaces.",
+  "prerequisites": [],
+  "enables": ["F01", "F02", "F08"],
+  "agent": "foundations-researcher",
+  "keywords": ["cosine similarity", "dot product", "dimensionality reduction", "PCA", "t-SNE", "UMAP", "vector norm", "linear algebra", "matrix factorization"],
+  "core_components": [
+    "코사인 유사도 (Cosine Similarity)",
+    "내적과 노름 (Dot Product & Norms)",
+    "차원 축소 (Dimensionality Reduction: PCA, t-SNE, UMAP)",
+    "행렬 분해 (Matrix Factorization)",
+    "고유값/고유벡터 (Eigenvalues/Eigenvectors)",
+    "벡터 공간 변환 (Vector Space Transformations)"
+  ],
+  "development_patterns": [
+    "벡터 인덱스 선택: 데이터 규모와 정확도 요구에 따라 Flat/IVF/HNSW 인덱스 전략 결정",
+    "차원의 저주 대응: 고차원 벡터를 PCA/UMAP으로 축소 후 시각화 및 디버깅",
+    "유사도 메트릭 기반 설계: 코사인/유클리디안/내적 중 태스크에 맞는 유사도 함수 선택",
+    "배치 벡터 연산 최적화: numpy/BLAS 활용 행렬 곱 일괄 처리로 O(n²)→O(n·d) 달성"
+  ]
+}
