@@ -1,0 +1,16 @@
+{
+  "name": "SOS 파이프라인",
+  "description": "벡터의미강화 → GraphRAG → 온톨로지 → ReBAC → 메타온톨로지 → 물리연산엔진",
+  "stages": [
+    { "order": 1, "concept_id": "C10", "name": "벡터 의미 강화", "input": "raw_query", "output": "enriched_vectors", "description": "3단계 의미 확장: 어휘확장 → 의미다층화 → 온톨로지정렬" },
+    { "order": 2, "concept_id": "C01", "name": "GraphRAG", "input": "enriched_vectors", "output": "graph_context", "description": "6단계 인덱싱: 청킹 → 엔티티추출 → 그래프구축 → 커뮤니티감지 → 요약생성 → 쿼리처리" },
+    { "order": 3, "concept_id": "C02", "name": "온톨로지", "input": "graph_context", "output": "structured_knowledge", "description": "클래스/속성/관계/공리로 지식 구조화" },
+    { "order": 4, "concept_id": "C07", "name": "ReBAC", "input": "structured_knowledge", "output": "access_controlled", "description": "관계 기반 접근 제어: 관계 경로가 존재해야 접근 허용" },
+    { "order": 5, "concept_id": "C08", "name": "메타온톨로지", "input": "access_controlled", "output": "meta_governed", "description": "도메인 횡단 패턴 추출: Level 1(도메인) → Level 2(메타) → Level 3(보편원리)" },
+    { "order": 6, "concept_id": "C14", "name": "물리연산엔진", "input": "meta_governed", "output": "computed_result", "description": "프랙탈 재귀 분해 + 병렬 에이전트 실행" }
+  ],
+  "influence_flows": [
+    { "concept_id": "C13", "name": "레버/메타레버", "targets": ["C14"], "direction": "right_to_left", "description": "파이프라인 파라미터 변환: 합성성/관측성/멱등성/회복성/버전관리" },
+    { "concept_id": "C05", "name": "위상적 지능", "targets": ["C13","C14"], "direction": "right_to_left", "description": "구조적 관계 분석으로 레버와 연산 최적화" }
+  ]
+}
