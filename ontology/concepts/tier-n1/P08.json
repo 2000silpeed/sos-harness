@@ -1,0 +1,26 @@
+{
+  "id": "P08",
+  "name": "Transformer Architecture",
+  "name_ko": "트랜스포머 아키텍처",
+  "tier": -1,
+  "tier_name": "순수기초 (Pure Foundations)",
+  "description": "Multi-head attention, positional encoding, BERT/GPT. The dominant neural architecture powering modern language models.",
+  "prerequisites": [],
+  "enables": ["F01", "F06"],
+  "agent": "foundations-researcher",
+  "keywords": ["multi-head attention", "positional encoding", "BERT", "GPT", "self-attention", "feed-forward", "layer normalization", "encoder-decoder", "causal masking"],
+  "core_components": [
+    "멀티헤드 어텐션 (Multi-Head Self-Attention)",
+    "위치 인코딩 (Positional Encoding)",
+    "인코더-디코더 구조 (Encoder-Decoder Architecture)",
+    "레이어 정규화 (Layer Normalization)",
+    "피드포워드 네트워크 (Feed-Forward Networks)",
+    "인과 마스킹 (Causal Masking for Autoregressive Generation)"
+  ],
+  "development_patterns": [
+    "모델 크기 선택: 지연시간/정확도 트레이드오프에 따라 경량(distilled) vs 대형 모델 선택",
+    "어텐션 패턴 분석: 어텐션 가중치 시각화로 모델의 추론 과정 해석 및 디버깅",
+    "컨텍스트 윈도우 관리: 입력 길이 제한에 맞춰 sliding window/chunking/summarization 전략 설계",
+    "추론 최적화: KV-cache, Flash Attention, quantization으로 서빙 지연시간 절감"
+  ]
+}
