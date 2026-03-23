@@ -1,0 +1,26 @@
+{
+  "id": "C04",
+  "name": "Palantir AIP + Apollo",
+  "name_ko": "Palantir AIP + Apollo",
+  "tier": 1,
+  "tier_name": "핵심 (Core)",
+  "description": "Foundry/Ontology/AIP/Apollo 4-layer stack, OAG (Ontology-Agent-Gateway) evolution. Enterprise AI platform integrating data, ontology, and autonomous agents.",
+  "prerequisites": ["F06", "F09", "F10"],
+  "enables": ["C06"],
+  "agent": "core-architect",
+  "keywords": ["Palantir", "AIP", "Apollo", "Foundry", "OAG", "Ontology SDK", "Action", "Logic", "autonomous agent", "enterprise AI"],
+  "core_components": [
+    "Foundry 데이터 레이어 (Data Integration & Pipelines)",
+    "온톨로지 레이어 (Object/Link/Action/Property Types)",
+    "AIP 레이어 (AI Platform: LLM Integration, Logic Functions)",
+    "Apollo 레이어 (Autonomous Agent Orchestration)",
+    "OAG 진화 (Ontology → Agent → Gateway Evolution)",
+    "Logic Functions (TypeScript/Python 기반 비즈니스 로직)"
+  ],
+  "development_patterns": [
+    "온톨로지 우선 개발: Object Type 정의 → Link Type 연결 → Action 구현 → Logic 함수 작성",
+    "OAG 패턴 적용: 온톨로지를 에이전트의 월드 모델로 활용, 게이트웨이로 외부 시스템 연결",
+    "점진적 자율성: 사람-in-the-loop → 사람-on-the-loop → 자율 실행 단계적 전환",
+    "Action 설계: 부작용을 가진 연산을 Action Type으로 캡슐화하여 감사/롤백 가능"
+  ]
+}
