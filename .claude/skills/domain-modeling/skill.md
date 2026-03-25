@@ -1,80 +1,80 @@
 ---
 name: domain-modeling
-description: "온톨로지 4요소 기반 도메인 모델링. 비즈니스 도메인을 클래스(엔티티)/속성(필드)/관계(FK·API)/공리(비즈니스규칙)로 분해하여 구조화한다. '도메인 모델링', '엔티티 설계', '데이터 모델', '비즈니스 규칙 정의' 등에 트리거된다."
+description: "Ontology 4-element based domain modeling. Decomposes a business domain into classes (entities) / properties (fields) / relations (FK, API) / axioms (business rules) for structured design. Triggered by: 'domain modeling', 'entity design', 'data model', 'business rules definition', 'ontology model', 'define entities'."
 ---
 
-# Domain Modeling — 온톨로지 기반 도메인 모델링
+# Domain Modeling — Ontology-Based Domain Modeling
 
-비즈니스 도메인을 온톨로지 4요소로 분해하여 코드 구조의 기초를 만든다.
+Decompose a business domain into ontology 4 elements to build the foundation for code structure.
 
-## 온톨로지 4요소 → 코드 매핑
+## Ontology 4 Elements → Code Mapping
 
-| 온톨로지 | 코드 | 예시 |
-|---------|------|------|
-| 클래스 (Class) | 엔티티, 테이블, 타입 | `User`, `Order`, `Product` |
-| 속성 (Property) | 컬럼, 필드, props | `user.email`, `order.total` |
-| 관계 (Relation) | FK, API 연동, import, 이벤트 | `User hasMany Orders` |
-| 공리 (Axiom) | 비즈니스 규칙, 제약조건, 검증 | "할인은 VIP만 가능" |
+| Ontology | Code | Example |
+|----------|------|---------|
+| Class | Entity, table, type | `User`, `Order`, `Product` |
+| Property | Column, field, props | `user.email`, `order.total` |
+| Relation | FK, API integration, import, event | `User hasMany Orders` |
+| Axiom | Business rule, constraint, validation | "Only VIP members can receive discounts" |
 
-## 5단계 도메인 모델링 프로세스
+## 5-Step Domain Modeling Process
 
-### Step 1: 범위 정의
-- 구체적 워크플로우 기반으로 범위 설정
-- "사용자가 실제로 하는 행동"을 나열
-- product-owner의 기능 우선순위 참조
+### Step 1: Scope Definition
+- Set scope based on concrete workflows
+- List "actions users actually perform"
+- Reference product-owner's feature priorities
 
-### Step 2: 자료 수집
-- 핵심 엔티티와 그 관계 식별
-- **예외 사항 우선 수집** — 정상 흐름보다 예외가 도메인 규칙을 드러냄
-- 도메인 용어 사전 작성
+### Step 2: Data Collection
+- Identify core entities and their relations
+- **Collect exceptions first** — exceptions reveal domain rules more than normal flows
+- Create domain terminology glossary
 
-### Step 3: 4요소로 구조화
-- 클래스 목록 + 각 클래스의 속성
-- 관계 매트릭스 (어떤 클래스가 어떤 관계로 연결되는지)
-- 공리 목록 (제약조건, 비즈니스 규칙)
-- **70% 완성도 OK** — 완벽을 추구하지 않음
+### Step 3: Structure with 4 Elements
+- Class list + properties for each class
+- Relation matrix (which classes connect via which relations)
+- Axiom list (constraints, business rules)
+- **70% completeness is OK** — do not pursue perfection
 
-### Step 4: 메타엣지 식별
-- 도메인의 "규칙의 규칙" 발견
-- 예: "모든 주문 관련 API는 인증 필요" (인증 = 메타엣지)
-- 예: "모든 데이터 변경은 감사 로그 기록" (감사 = 메타엣지)
+### Step 4: Meta-Edge Identification
+- Discover "rules about rules" in the domain
+- Example: "All order-related APIs require authentication" (auth = meta-edge)
+- Example: "All data mutations must be audit-logged" (audit = meta-edge)
 
-### Step 5: 검증
-- 100개 사용자 시나리오 중 80%+ 처리 가능한지 확인
-- 모순되는 관계/공리 없는지 확인
-- 도메인 전문가(또는 product-owner)가 즉시 이해 가능한지 확인
+### Step 5: Validation
+- Verify 80%+ of 100 user scenarios can be handled
+- Confirm no contradicting relations/axioms exist
+- Confirm domain expert (or product-owner) can understand immediately
 
-## 출력 포맷 — `_workspace/02_domain_model.md`
+## Output Format — `_workspace/02_domain_model.md`
 
 ```
-# 온톨로지 기반 도메인 모델
+# Ontology-Based Domain Model
 
-## 도메인 개요
-[비즈니스 도메인 설명]
+## Domain Overview
+[Business domain description]
 
-## 도메인 용어 사전
-| 용어 | 정의 | 코드명 |
-|------|------|--------|
+## Domain Terminology Glossary
+| Term | Definition | Code Name |
+|------|-----------|-----------|
 
-## 클래스 (엔티티)
-| 클래스 | 설명 | 핵심 속성 | Prisma 모델 |
-|--------|------|----------|------------|
+## Classes (Entities)
+| Class | Description | Key Properties | Prisma Model |
+|-------|------------|----------------|-------------|
 
-## 관계 (엣지)
-| 주체 | 관계 | 대상 | 카디널리티 | FK/구현 |
-|------|------|------|-----------|---------|
+## Relations (Edges)
+| Subject | Relation | Object | Cardinality | FK/Implementation |
+|---------|----------|--------|------------|-------------------|
 
-## 공리 (비즈니스 규칙)
-| # | 규칙 | 관련 클래스 | 구현 위치 |
-|---|------|-----------|----------|
-| A1 | [규칙] | [클래스] | [서비스/미들웨어/DB제약] |
+## Axioms (Business Rules)
+| # | Rule | Related Classes | Implementation Location |
+|---|------|----------------|------------------------|
+| A1 | [Rule] | [Classes] | [Service/Middleware/DB constraint] |
 
-## 메타엣지 (규칙의 규칙)
-| 메타엣지 | 영향 범위 | 구현 방식 |
-|---------|----------|----------|
-| 인증 | 모든 API 관계 | auth middleware |
-| 감사 로그 | 모든 CUD 관계 | audit interceptor |
+## Meta-Edges (Rules About Rules)
+| Meta-Edge | Scope of Impact | Implementation |
+|-----------|----------------|----------------|
+| Authentication | All API relations | auth middleware |
+| Audit log | All CUD relations | audit interceptor |
 
-## 관계 다이어그램
+## Relation Diagram
 [mermaid ERD]
 ```

@@ -1,65 +1,65 @@
 ---
 name: impact-analysis
-description: "NOMIK 스타일 코드 영향도 분석. 코드 변경이 어디까지 영향을 미치는지 구조적으로 분석한다. '영향도 분석', '이거 바꾸면 뭐가 깨지나', '변경 영향', '리팩토링 전 분석' 등에 트리거된다."
+description: "NOMIK-style code impact analysis. Structurally analyzes how far a code change's effects propagate. Triggered by: 'impact analysis', 'what breaks if I change this', 'change impact', 'pre-refactoring analysis', 'dependency analysis', 'blast radius'."
 ---
 
-# Impact Analysis — NOMIK 영향도 분석
+# Impact Analysis — NOMIK Impact Analysis
 
-코드 변경의 파급 효과를 구조적으로 분석한다. 47개 파일을 뒤지는 대신, 관계 그래프에서 연결된 노드만 정밀 분석.
+Structurally analyze the ripple effects of code changes. Instead of sifting through 47 files, precisely analyze only the connected nodes in the relation graph.
 
-## NOMIK 사고방식 (C11)
+## NOMIK Thinking Model (C11)
 
-코드를 지식 그래프로 본다:
-- **노드**: 파일, 함수, 클래스, 컴포넌트, API 엔드포인트, DB 테이블
-- **엣지**: import, 함수 호출, API 연동, FK 참조, 이벤트 구독, props 전달
+View code as a knowledge graph:
+- **Nodes**: Files, functions, classes, components, API endpoints, DB tables
+- **Edges**: imports, function calls, API integrations, FK references, event subscriptions, props passing
 
-## 3단계 분석
+## 3-Step Analysis
 
-### Step 1: SCAN — 영향 범위 식별
-1. 변경 대상 코드(노드) 식별
-2. 직접 연결된 노드 탐색 (1-hop):
-   - 이 파일을 import하는 곳
-   - 이 함수를 호출하는 곳
-   - 이 API를 사용하는 프론트엔드
-   - 이 테이블을 참조하는 쿼리
-3. 간접 연결 탐색 (2-hop): 직접 영향받는 노드가 영향을 주는 곳
+### Step 1: SCAN — Identify Impact Scope
+1. Identify the target code (node) being changed
+2. Explore directly connected nodes (1-hop):
+   - Where this file is imported
+   - Where this function is called
+   - Which frontend uses this API
+   - Which queries reference this table
+3. Explore indirect connections (2-hop): where directly affected nodes propagate impact
 
-### Step 2: STORE — 관계 매핑
-| 변경 대상 | 관계 유형 | 영향받는 코드 | Hop | 영향 심각도 |
-|----------|----------|------------|-----|-----------|
-| [함수/파일] | [import/call/API/FK] | [코드] | [1/2] | [🔴🟡🟢] |
+### Step 2: STORE — Relation Mapping
+| Change Target | Relation Type | Affected Code | Hop | Impact Severity |
+|--------------|---------------|---------------|-----|-----------------|
+| [function/file] | [import/call/API/FK] | [code] | [1/2] | [🔴🟡🟢] |
 
-### Step 3: QUERY — 리스크 판단
-- **🔴 Breaking**: 타입/인터페이스 변경, 삭제, 필수 파라미터 변경
-- **🟡 Warning**: 동작 변경, 성능 영향, 부수 효과
-- **🟢 Safe**: 내부 구현만 변경, 인터페이스 동일
+### Step 3: QUERY — Risk Assessment
+- **🔴 Breaking**: Type/interface change, deletion, required parameter change
+- **🟡 Warning**: Behavior change, performance impact, side effects
+- **🟢 Safe**: Internal implementation only, interface unchanged
 
-## 핵심 질문
+## Key Question
 
-> "이 심볼(함수/클래스/API)을 변경하면 무엇이 깨지는가?"
+> "If I change this symbol (function/class/API), what breaks?"
 
-이것이 NOMIK이 기존 RAG보다 나은 이유: 47개 노이즈 파일 대신 6개 정밀한 관계 노드만 분석.
+This is why NOMIK outperforms traditional RAG: instead of 47 noisy files, it precisely analyzes only 6 relevant relation nodes.
 
-## 출력 포맷
+## Output Format
 
 ```
-# 영향도 분석 보고서
+# Impact Analysis Report
 
-## 변경 대상
-[변경하려는 코드와 변경 내용]
+## Change Target
+[Code being changed and description of the change]
 
-## 영향 그래프
-[변경 대상에서 시작하는 관계 트리]
+## Impact Graph
+[Relation tree starting from the change target]
 
-## 영향받는 코드 목록
-| # | 파일:라인 | 관계 | Hop | 심각도 | 필요 조치 |
-|---|----------|------|-----|--------|----------|
+## Affected Code List
+| # | File:Line | Relation | Hop | Severity | Required Action |
+|---|-----------|----------|-----|----------|-----------------|
 
-## 테스트 권장
-[영향받는 영역의 테스트 실행 권장 목록]
+## Recommended Tests
+[List of recommended test executions for affected areas]
 
-## 리스크 요약
-- 🔴 Breaking: [개수]
-- 🟡 Warning: [개수]
-- 🟢 Safe: [개수]
+## Risk Summary
+- 🔴 Breaking: [count]
+- 🟡 Warning: [count]
+- 🟢 Safe: [count]
 ```

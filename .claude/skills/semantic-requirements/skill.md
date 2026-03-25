@@ -1,65 +1,65 @@
 ---
 name: semantic-requirements
-description: "요구사항 의미 강화. 모호한 사용자 요구사항을 3단계(어휘확장→의미다층화→온톨로지정렬)로 정밀한 스펙으로 변환한다. '요구사항 분석', '스펙 작성', '요구사항 정리', '뭘 만들어야 하지' 등에 트리거된다."
+description: "Requirements semantic enrichment. Transforms ambiguous user requirements into precise specs through 3 stages: lexical expansion → semantic layering → ontology alignment. Triggered by: 'requirements analysis', 'write specs', 'organize requirements', 'what should I build', 'clarify requirements', 'spec refinement'."
 ---
 
-# Semantic Requirements — 요구사항 의미 강화
+# Semantic Requirements — Requirements Semantic Enrichment
 
-모호한 요구사항을 SOS C10(벡터 의미 강화) 사고방식으로 3단계 정밀화한다.
+Refine ambiguous requirements through 3 stages using the SOS C10 (vector semantic enrichment) thinking model.
 
-## 문제
+## Problem
 
-사용자의 요구사항은 구조적으로 불완전하다:
-- "권한 설정 어떻게 해?" → 무엇의 권한? 어떤 수준? 어떤 모델?
-- "대시보드 만들어줘" → 누구를 위한? 어떤 데이터? 어떤 차트?
+User requirements are structurally incomplete:
+- "How do I set up permissions?" → Permissions for what? What level? Which model?
+- "Build me a dashboard" → For whom? What data? What charts?
 
-## 3단계 의미 강화
+## 3-Stage Semantic Enrichment
 
-### Stage 1: 어휘 확장 (Lexical Expansion)
-- 동의어, 유사어, 관련 용어 나열
-- 유사 제품/서비스 참조
-- **예**: "권한" → 인증, 인가, ACL, RBAC, 접근 제어, 허가
+### Stage 1: Lexical Expansion
+- List synonyms, near-synonyms, and related terms
+- Reference similar products/services
+- **Example**: "permissions" → authentication, authorization, ACL, RBAC, access control, grants
 
-### Stage 2: 의미 다층화 (Semantic Layering)
-- 추상 → 구체 스펙트럼 구성
-- **예**:
-  - 추상: "보안 체계"
-  - 중간: "접근 제어 모델"
-  - 구체: "ReBAC 기반 관계 경로 권한 + Supabase RLS 정책"
+### Stage 2: Semantic Layering
+- Construct an abstract → concrete spectrum
+- **Example**:
+  - Abstract: "security system"
+  - Intermediate: "access control model"
+  - Concrete: "ReBAC-based relation-path permissions + Supabase RLS policies"
 
-### Stage 3: 온톨로지 정렬 (Ontology Alignment)
-- 도메인 용어로 앵커링하여 과도한 확장 방지
-- 도메인 온톨로지의 클래스/관계에 매핑
-- **예**: 최종 스펙 = "ReBAC 기반 역할-관계 권한 설정, Supabase RLS 정책으로 DB 수준 적용"
+### Stage 3: Ontology Alignment
+- Anchor to domain terminology to prevent over-expansion
+- Map to domain ontology classes/relations
+- **Example**: Final spec = "ReBAC-based role-relation permission configuration, applied at DB level via Supabase RLS policies"
 
-## 출력 포맷
+## Output Format
 
 ```
-# 요구사항 의미 강화 보고서
+# Semantic Enrichment Report
 
-## 원본 요구사항
-[사용자 원문]
+## Original Requirements
+[User's original text]
 
-## Stage 1: 어휘 확장
-| 원본 용어 | 확장 용어 | 유사 제품/서비스 |
-|----------|----------|----------------|
+## Stage 1: Lexical Expansion
+| Original Term | Expanded Terms | Similar Products/Services |
+|--------------|---------------|--------------------------|
 
-## Stage 2: 의미 다층화
-| 수준 | 설명 | 구현 수준 |
-|------|------|----------|
-| 추상 | [...] | 전략 |
-| 중간 | [...] | 설계 |
-| 구체 | [...] | 구현 |
+## Stage 2: Semantic Layering
+| Level | Description | Implementation Level |
+|-------|------------|---------------------|
+| Abstract | [...] | Strategy |
+| Intermediate | [...] | Design |
+| Concrete | [...] | Implementation |
 
-## Stage 3: 온톨로지 정렬
-- **정렬된 도메인 용어**: [...]
-- **관련 엔티티**: [...]
-- **관련 관계**: [...]
+## Stage 3: Ontology Alignment
+- **Aligned domain terms**: [...]
+- **Related entities**: [...]
+- **Related relations**: [...]
 
-## 정밀화된 요구사항
-[최종 스펙 - 구체적이고 실행 가능한 형태]
+## Refined Requirements
+[Final spec - concrete and actionable form]
 
-## 수용 기준 (Acceptance Criteria)
+## Acceptance Criteria
 - [ ] [AC1]
 - [ ] [AC2]
 - [ ] [AC3]

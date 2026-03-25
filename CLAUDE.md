@@ -1,93 +1,93 @@
 # SOS Fullstack Development Harness
 
-온톨로지 사상으로 풀스택 개발하는 하네스. SOS(Study Ontology System) 35개 개념을 **개발 방법론**으로 적용하고, GAN 영감의 Generator/Evaluator 아키텍처로 에이전트 팀이 요구사항→설계→Sprint Contract→프론트엔드→백엔드→채점 기반 검증→배포를 협업 수행한다.
+A harness for fullstack development driven by ontology as a thinking model. Applies all 35 SOS (Study Ontology System) concepts as a **development methodology**, and uses a GAN-inspired Generator/Evaluator architecture where an agent team collaboratively executes requirements → design → Sprint Contract → frontend → backend → grading-based verification → deployment.
 
-## 핵심 철학
+## Core Philosophy
 
-> 온톨로지는 만드는 대상이 아니라 **생각하는 방식**이다.
+> Ontology is not something you build — it is a **thinking model**.
 
-모든 개발 단계에서 "엔티티는 무엇이고, 관계는 무엇이고, 규칙은 무엇인가?"를 묻는다. 이것이 확률적 코딩(감으로 짜기)에서 구조적 코딩(관계로 짜기)으로의 전환이다.
+At every development stage, ask: "What are the entities, what are the relationships, and what are the rules?" This is the shift from probabilistic coding (coding by intuition) to structural coding (coding by relationships).
 
-## 설계 참조
+## Design References
 
-- [Harness Design for Long-Running Apps](https://www.anthropic.com/engineering/harness-design-long-running-apps) — GAN 패턴, Context Reset, Sprint Contract
-- [Building Effective Agents](https://www.anthropic.com/research/building-effective-agents) — 에이전트 오케스트레이션
-- [Frontend Design Skill](https://github.com/anthropics/claude-code/blob/main/plugins/frontend-design/skills/frontend-design/SKILL.md) — AI 슬롭 방지 디자인
+- [Harness Design for Long-Running Apps](https://www.anthropic.com/engineering/harness-design-long-running-apps) — GAN pattern, Context Reset, Sprint Contract
+- [Building Effective Agents](https://www.anthropic.com/research/building-effective-agents) — Agent orchestration
+- [Frontend Design Skill](https://github.com/anthropics/claude-code/blob/main/plugins/frontend-design/skills/frontend-design/SKILL.md) — AI slop prevention design
 
-## 구조
+## Structure
 
 ```
 .claude/
 ├── agents/
-│   ├── product-owner.md         — Planner: 사업성 판단, 스펙 확장
-│   ├── architect.md             — Generator: 온톨로지 기반 도메인 모델링
-│   ├── frontend-dev.md          — Generator: UI + 디자인 품질 (AI 슬롭 방지)
-│   ├── backend-dev.md           — Generator: ReBAC 인증, 메타엣지 미들웨어
-│   ├── qa-engineer.md           — Evaluator: 정량 채점, 6-공간 리뷰, NOMIK
-│   ├── devops-engineer.md       — Generator: 레버 5속성 CI/CD
-│   └── ontology-advisor.md      — Advisor: SOS 방법론 컨설팅
+│   ├── product-owner.md         — Planner: Business viability assessment, spec expansion
+│   ├── architect.md             — Generator: Ontology-based domain modeling
+│   ├── frontend-dev.md          — Generator: UI + design quality (AI slop prevention)
+│   ├── backend-dev.md           — Generator: ReBAC auth, meta-edge middleware
+│   ├── qa-engineer.md           — Evaluator: Quantitative grading, 6-space review, NOMIK
+│   ├── devops-engineer.md       — Generator: Lever 5-property CI/CD
+│   └── ontology-advisor.md      — Advisor: SOS methodology consulting
 ├── skills/
-│   ├── sos-fullstack/skill.md   — 오케스트레이터 (GAN 루프, Sprint Contract)
-│   ├── domain-modeling/skill.md — 도메인 모델링
-│   ├── six-space-review/skill.md — 6-공간 코드 리뷰
-│   ├── impact-analysis/skill.md — NOMIK 영향도 분석
-│   └── semantic-requirements/skill.md — 요구사항 의미 강화
-└── CLAUDE.md                    — 상세 아키텍처
+│   ├── sos-fullstack/skill.md   — Orchestrator (GAN loop, Sprint Contract)
+│   ├── domain-modeling/skill.md — Domain modeling
+│   ├── six-space-review/skill.md — 6-space code review
+│   ├── impact-analysis/skill.md — NOMIK impact analysis
+│   └── semantic-requirements/skill.md — Requirements semantic enrichment
+└── CLAUDE.md                    — Detailed architecture
 ```
 
-## v2 개선사항 (2026-03-26)
+## v2 Improvements (2026-03-26)
 
-| 개선 | 출처 | 효과 |
+| Improvement | Source | Effect |
 |------|------|------|
-| **GAN Generator/Evaluator 분리** | Anthropic Blog | 자기 평가 바이어스 제거, 독립적 품질 보증 |
-| **Sprint Contract** | Anthropic Blog | 구현 전 성공 기준 합의 → 기대치 불일치 방지 |
-| **정량 채점 루브릭** | Anthropic Blog | 주관적 🔴/🟡/🟢 → 5점 척도 + 합격 임계값 |
-| **Context Reset 프로토콜** | Anthropic Blog | 파일 기반 핸드오프로 장시간 세션 일관성 유지 |
-| **AI 슬롭 방지 디자인** | Frontend Skill | 범용 폰트/보라색 그라디언트 등 제네릭 패턴 거부 |
-| **Playwright MCP 라이브 테스트** | Anthropic Blog | 실제 브라우저 기반 UI/API 검증 |
-| **Planner 역할 강화** | Anthropic Blog | 1-4문장 → 포괄적 제품 스펙 확장 |
-| **Opus 4.6 최적화** | Anthropic Blog | Sprint 과세분화 제거, 단계 완료 시점 평가 |
+| **GAN Generator/Evaluator separation** | Anthropic Blog | Eliminates self-evaluation bias, independent quality assurance |
+| **Sprint Contract** | Anthropic Blog | Pre-implementation success criteria agreement → prevents expectation mismatch |
+| **Quantitative grading rubric** | Anthropic Blog | Subjective 🔴/🟡/🟢 → 5-point scale + pass threshold |
+| **Context Reset protocol** | Anthropic Blog | File-based handoff maintains consistency across long sessions |
+| **AI slop prevention design** | Frontend Skill | Rejects generic patterns such as generic fonts/purple gradients |
+| **Playwright MCP live testing** | Anthropic Blog | Real browser-based UI/API verification |
+| **Enhanced Planner role** | Anthropic Blog | 1-4 sentences → comprehensive product spec expansion |
+| **Opus 4.6 optimization** | Anthropic Blog | Eliminates Sprint over-fragmentation, evaluates at phase completion |
 
-## SOS 개념의 개발 적용
+## Applying SOS Concepts to Development
 
-| SOS 개념 | 개발에서의 의미 | 적용 에이전트 |
+| SOS Concept | Meaning in Development | Applied Agent |
 |----------|---------------|-------------|
-| C02 온톨로지 | 도메인 모델 = 클래스/속성/관계/공리 | architect |
-| C06 6분석공간 | 코드 리뷰 6차원 (계층/시간/재귀/구조/인과/통합) | qa-engineer |
-| C07 ReBAC | 관계 기반 인증/인가 설계 | backend-dev |
-| C03 메타엣지 | 미들웨어, 데코레이터, 인터셉터 = "규칙의 규칙" | backend-dev |
-| C11 NOMIK | "이 코드 바꾸면 뭐가 깨지나?" 영향도 분석 | qa-engineer |
-| C10 벡터의미강화 | 모호한 요구사항 → 정밀한 스펙으로 확장 | product-owner |
-| C13 레버/메타레버 | CI/CD 5속성: 합성성/관측성/멱등성/회복성/버전관리 | devops-engineer |
-| C14 물리연산엔진 | 프랙탈 분해: 큰 태스크를 재귀적으로 병렬 분해 | 전체 |
-| C15 능동메타데이터 | 사용자 컨텍스트에 따라 실시간 적응하는 UI | frontend-dev |
-| C04 AIP/Apollo | 텍스트→구조→액션 패턴의 제품 설계 | product-owner |
+| C02 Ontology (온톨로지) | Domain model = classes/properties/relationships/axioms | architect |
+| C06 6 Analysis Spaces (6분석공간) | Code review in 6 dimensions (hierarchy/temporal/recursive/structural/causal/integrated) | qa-engineer |
+| C07 ReBAC | Relationship-based authentication/authorization design | backend-dev |
+| C03 Meta-edge (메타엣지) | Middleware, decorators, interceptors = "rules about rules" | backend-dev |
+| C11 NOMIK | "If I change this code, what breaks?" — impact analysis | qa-engineer |
+| C10 Vector Semantic Enrichment (벡터의미강화) | Ambiguous requirements → precise spec expansion | product-owner |
+| C13 Lever/Meta-lever (레버/메타레버) | CI/CD 5 properties: composability/observability/idempotency/recoverability/version control | devops-engineer |
+| C14 Physics Computation Engine (물리연산엔진) | Fractal decomposition: recursively decompose large tasks in parallel | All |
+| C15 Active Metadata (능동메타데이터) | UI that adapts in real-time based on user context | frontend-dev |
+| C04 AIP/Apollo | Product design following the text → structure → action pattern | product-owner |
 
-## 사용법
+## Usage
 
-`/sos-fullstack` 스킬을 트리거하거나, 자연어로 개발 요청한다.
+Trigger the `/sos-fullstack` skill, or make a development request in natural language.
 
-## 산출물
+## Artifacts
 
-모든 산출물은 `_workspace/`에 생성된다:
-- `_workspace/00_input.md` — 사용자 입력 정리
-- `_workspace/01_market_analysis.md` — 시장/사업성 분석 + 확장 스펙 (PO/Planner)
-- `_workspace/02_domain_model.md` — 온톨로지 기반 도메인 모델 (architect)
-- `_workspace/03_architecture.md` — 시스템 아키텍처 (architect)
-- `_workspace/03.5_sprint_contract.md` — Sprint Contract: 성공 기준 합의 (qa ↔ 개발자)
-- `_workspace/04_api_spec.md` — API 명세 (architect)
-- `_workspace/05_db_schema.md` — DB 스키마 (architect)
-- `_workspace/06_test_plan.md` — 테스트 계획 (qa)
-- `_workspace/07_deploy_guide.md` — 배포 가이드 (devops)
-- `_workspace/08_six_space_review.md` — 6-공간 코드 리뷰 (qa)
-- `_workspace/09_review_report.md` — 최종 리뷰 보고서
-- `_workspace/10_grade_report.md` — 정량 채점 보고서 (qa/Evaluator)
-- `src/` — 소스 코드
+All artifacts are generated in `_workspace/`:
+- `_workspace/00_input.md` — Organized user input
+- `_workspace/01_market_analysis.md` — Market/business viability analysis + expanded spec (PO/Planner)
+- `_workspace/02_domain_model.md` — Ontology-based domain model (architect)
+- `_workspace/03_architecture.md` — System architecture (architect)
+- `_workspace/03.5_sprint_contract.md` — Sprint Contract: success criteria agreement (qa ↔ developers)
+- `_workspace/04_api_spec.md` — API specification (architect)
+- `_workspace/05_db_schema.md` — DB schema (architect)
+- `_workspace/06_test_plan.md` — Test plan (qa)
+- `_workspace/07_deploy_guide.md` — Deployment guide (devops)
+- `_workspace/08_six_space_review.md` — 6-space code review (qa)
+- `_workspace/09_review_report.md` — Final review report
+- `_workspace/10_grade_report.md` — Quantitative grading report (qa/Evaluator)
+- `src/` — Source code
 
-## 온톨로지 방법론 참조
+## Ontology Methodology Reference
 
-SOS 35개 개념의 상세 정의는 `ontology/` 디렉토리에 있다:
-- `ontology/sos-graph.json` — 전체 개념 그래프
-- `ontology/concepts/{tier}/{ID}.json` — 개별 개념 상세
-- `ontology/edges.json` — 개념 간 관계
-- `ontology/meta-edges.json` — 메타엣지 규칙
+Detailed definitions of all 35 SOS concepts are in the `ontology/` directory:
+- `ontology/sos-graph.json` — Complete concept graph
+- `ontology/concepts/{tier}/{ID}.json` — Individual concept details
+- `ontology/edges.json` — Inter-concept relationships
+- `ontology/meta-edges.json` — Meta-edge rules
